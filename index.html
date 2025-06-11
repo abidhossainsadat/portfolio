@@ -194,7 +194,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 60px;
+      width: 560px;
       height: 4px;
       background-color: var(--accent-primary);
       border-radius: 3px;
@@ -290,23 +290,58 @@
       .article-title { font-size: 1.8rem; }
       .contact-info { gap: 0.5rem 1rem; flex-direction: column; align-items: center;}
     }
+
+    /* Styling for the new header image and name container */
+.name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem; /* Maintains space below the name/image group */
+}
+
+.header-profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--accent-primary);
+}
+
+/* We move the margin-bottom from the h1 to the new container */
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0; /* This is changed from 1rem */
+
+    background: -webkit-linear-gradient(45deg, #FFFFFF, var(--accent-primary));
+    background: linear-gradient(45deg, #FFFFFF, var(--accent-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
   </style>
 </head>
 <body>
   <main>
-    <aside class="sidebar">
-      <div class="timeline-node"><div class="icon-box"><ion-icon name="person-outline"></ion-icon></div></div>
-      <div class="timeline-node"><div class="icon-box"><ion-icon name="sparkles-outline"></ion-icon></div></div>
-      <div class="timeline-node"><div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div></div>
-      <div class="timeline-node"><div class="icon-box"><ion-icon name="newspaper-outline"></ion-icon></div></div>
-      <div class="timeline-node"><div class="icon-box"><ion-icon name="school-outline"></ion-icon></div></div>
-    </aside>
+<aside class="sidebar">
+    <div class="timeline-node"><div class="icon-box"><a href="#profile-summary"><ion-icon name="person-outline"></ion-icon></a></div></div>
+    <div class="timeline-node"><div class="icon-box"><a href="#top-skills"><ion-icon name="sparkles-outline"></ion-icon></a></div></div>
+    <div class="timeline-node"><div class="icon-box"><a href="#experience"><ion-icon name="briefcase-outline"></ion-icon></a></div></div>
+    <div class="timeline-node"><div class="icon-box"><a href="#publications"><ion-icon name="newspaper-outline"></ion-icon></a></div></div>
+    <div class="timeline-node"><div class="icon-box"><a href="#education"><ion-icon name="school-outline"></ion-icon></a></div></div>
+</aside>
 
     <div class="main-content">
       <article>
 
         <section class="header">
-          <h1>Abid Hossain</h1>
+          <div class="name-container">
+ <img src="https://media.licdn.com/dms/image/v2/D5603AQEO8YRJxALKjw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707559936241?e=1755129600&amp;v=beta&amp;t=lijTPpMiCeDtAAWufTwzJkQBqs_wUJ1B2WRzs5w_2-g" alt="Abid Hossain" class="header-profile-image">
+  <h1>Abid Hossain</h1>
+</div>
           <p>Computational Researcher & Applied Mathematician specializing in CFD, Machine Learning, and Game Theory.</p>
           <ul class="contact-info">
             <li><ion-icon name="mail-outline"></ion-icon> <a href="mailto:abid28266@gmail.com">abid28266@gmail.com</a></li>
@@ -320,7 +355,7 @@
         </section>
 
         <section>
-          <h2 class="article-title">Profile summary</h2>
+          <h2 class="article-title" id="profile-summary">Profile summary</h2>
           <ul class="skills-list">
             <li><p>Abid Hossain works as a dedicated researcher in computational fluid dynamics, applied simulations, and mathematical epidemiology. With expertise in multistrain epidemic modeling, fluid mechanics, and simulation from data, he has published a number of research papers and contributed to high-impact work such as a UGC-funded game dynamic model for COVID-19. Abid has his work published in renowned journals such as <em>Scientific Reports</em> and <em>Journal of Thermal Analysis and Calorimetry</em> and also presented papers in international conferences such as JTACC and ICMMPE.</p>
                 <p>In addition to his work in research, Abid also serves as an active certified referee for Springer and Elsevier and facilitates high-quality publication of scientific journals. He also founded the Applied Mathematics Programming Society and encouraged interdisciplinary problem-solving with numerical techniques and data visualization. Abid pursues a Master's at the University of Dhaka on the basis of the NST Fellowship and balances technical expertise with leadership and mentorship as well as a pursuit of excellence in academics.</p>
@@ -330,7 +365,7 @@
         
 
         <section>
-          <h2 class="article-title">Top Skills</h2>
+          <h2 class="article-title" id="top-skills">Top Skills</h2>
           <ul class="skills-list">
             <li>Computational Fluid Dynamics</li>
             <li>Machine Learning</li>
@@ -345,7 +380,7 @@
           </ul>
         </section>
     <section>        
-          <h2 class="article-title">Experience</h2>
+          <h2 class="article-title" id="experience">Experience</h2>
         <ol class="timeline-list">
           <li class="timeline-item">
             <h4 class="timeline-item-title">Research Assistant</h4>
@@ -402,7 +437,7 @@
       </section>
 
 <section>
-        <h2 class="article-title">Publications</h2>
+        <h2 class="article-title" id="publications">Publications</h2>
         <ol class="publication-list">
             <li class="publication-item">
                 <p> 🢂 Hossain, A., Shamashuddin, M.D., Asogwa, K.K. and Ferdows, M. Heat transmission phenomenon in magnetic nanofluid flow across movable flat device with heat source impact: local non-similarity solution with 2nd-stage truncation. <i>Journal of Thermal Analysis and Calorimetry</i>, 149(4), pp.1581-1594. (“2nd Annual JTAC conference 2023 Budapest, Hungary” Poster Presentation) <span class="citation">[7 citations]</span></p>
@@ -417,7 +452,7 @@
 </section>
 
         <section>
-          <h2 class="article-title">Education</h2>
+          <h2 class="article-title" id="education">Education</h2>
           <ol class="timeline-list">
             <li class="timeline-item">
               <h4 class="timeline-item-title">Masters</h4>
