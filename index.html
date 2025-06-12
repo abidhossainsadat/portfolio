@@ -104,6 +104,10 @@
       flex-direction: column;
       align-items: center;
       border-right: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
     }
     .timeline-node .icon-box {
       width: 50px;
@@ -118,6 +122,7 @@
       color: var(--accent-primary);
       margin-bottom: 3rem;
       transition: all 0.3s ease;
+      cursor: pointer;
     }
     .timeline-node .icon-box:hover {
         background-color: var(--accent-primary);
@@ -131,6 +136,7 @@
       flex-grow: 1;
       padding: 50px;
       overflow-y: auto;
+      height: 100vh;
     }
     .main-content::-webkit-scrollbar { width: 5px; }
     .main-content::-webkit-scrollbar-track { background: transparent; }
@@ -281,8 +287,10 @@
           justify-content: space-around;
           border-right: none;
           border-bottom: 1px solid var(--border-color);
+          position: static;
       }
       .timeline-node .icon-box { margin-bottom: 0; }
+      .main-content { height: auto; }
     }
     @media (max-width: 768px) {
       .main-content { padding: 30px 25px; }
@@ -327,11 +335,11 @@
 <body>
   <main>
 <aside class="sidebar">
-    <div class="timeline-node"><div class="icon-box"><a href="#profile-summary"><ion-icon name="person-outline"></ion-icon></a></div></div>
-    <div class="timeline-node"><div class="icon-box"><a href="#top-skills"><ion-icon name="sparkles-outline"></ion-icon></a></div></div>
-    <div class="timeline-node"><div class="icon-box"><a href="#experience"><ion-icon name="briefcase-outline"></ion-icon></a></div></div>
-    <div class="timeline-node"><div class="icon-box"><a href="#publications"><ion-icon name="newspaper-outline"></ion-icon></a></div></div>
-    <div class="timeline-node"><div class="icon-box"><a href="#education"><ion-icon name="school-outline"></ion-icon></a></div></div>
+    <div class="timeline-node"><div class="icon-box" onclick="scrollToSection('profile-summary')"><ion-icon name="person-outline"></ion-icon></div></div>
+    <div class="timeline-node"><div class="icon-box" onclick="scrollToSection('top-skills')"><ion-icon name="sparkles-outline"></ion-icon></div></div>
+    <div class="timeline-node"><div class="icon-box" onclick="scrollToSection('experience')"><ion-icon name="briefcase-outline"></ion-icon></div></div>
+    <div class="timeline-node"><div class="icon-box" onclick="scrollToSection('publications')"><ion-icon name="newspaper-outline"></ion-icon></div></div>
+    <div class="timeline-node"><div class="icon-box" onclick="scrollToSection('education')"><ion-icon name="school-outline"></ion-icon></div></div>
 </aside>
 
     <div class="main-content">
@@ -441,7 +449,7 @@
     <ol class="publication-list">
         <li class="publication-item">
             <p> 🢂 Hossain, A., Shamashuddin, M.D., Asogwa, K.K. and Ferdows, M. Heat transmission phenomenon in magnetic nanofluid flow across movable flat device with heat source impact: local non-similarity solution with 2nd-stage truncation. 
-            <i><a href="https://link.springer.com/article/10.1007/s10973-023-12751-8" target="_blank">Journal of Thermal Analysis and Calorimetry</a></i>, 149(4), pp.1581-1594. (“2nd Annual JTAC conference 2023 Budapest, Hungary” Poster Presentation) 
+            <i><a href="https://link.springer.com/article/10.1007/s10973-023-12751-8" target="_blank">Journal of Thermal Analysis and Calorimetry</a></i>, 149(4), pp.1581-1594. ("2nd Annual JTAC conference 2023 Budapest, Hungary" Poster Presentation) 
             <span class="citation">[7 citations]</span></p>
         </li>
         <li class="publication-item">
@@ -508,5 +516,17 @@
       </article>
     </div>
   </main>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  </script>
 </body>
 </html>
