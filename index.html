@@ -526,7 +526,7 @@
       transform: translateY(-5px) scale(1.05);
       background: var(--accent-gradient);
       color: var(--bg-dark);
-      box-shadow: var(--shadow-glow);
+      box-shadow: 0 4px 12px rgba(0, 229, 204, 0.2);
       border-color: var(--accent-primary);
     }
 
@@ -534,21 +534,32 @@
       left: 100%;
     }
 
-    /* Profile Summary Special Styling */
-    .skills-list p {
+    /* Profile Summary Special Styling - REDUCED GLOW */
+    .profile-summary-container {
       background: rgba(255, 255, 255, 0.02);
       padding: 1.5rem;
       border-radius: 16px;
       border: 1px solid var(--border-color);
-      line-height: 1.9;
-      font-size: 1.05rem;
       transition: var(--transition-smooth);
     }
 
-    .skills-list p:hover {
-      background: rgba(255, 255, 255, 0.01);
-      border-color: var(--accent-primary);
-      box-shadow: var(--shadow-md);
+    .profile-summary-container:hover {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(0, 229, 204, 0.3);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile-summary-container p {
+      line-height: 1.9;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+
+    .profile-summary-container p:last-child {
+      margin-bottom: 0;
     }
 
     /* PUBLICATIONS */
@@ -950,12 +961,10 @@
 
         <section>
           <h2 class="article-title" id="profile-summary">Profile Summary</h2>
-          <ul class="skills-list">
-            <li>
-              <p>Abid Hossain works as a dedicated researcher in computational fluid dynamics, applied simulations, and mathematical epidemiology. With expertise in multistrain epidemic modeling, fluid mechanics, and simulation from data, he has published a number of research papers and contributed to high-impact work such as a UGC-funded game dynamic model for COVID-19. Abid has his work published in renowned journals such as <em>Scientific Reports</em> and <em>Journal of Thermal Analysis and Calorimetry</em> and also presented papers in international conferences such as JTACC and ICMMPE.</p>
-              <p>In addition to his work in research, Abid also serves as an active certified referee for Springer and Elsevier and facilitates high-quality publication of scientific journals. He also founded the Applied Mathematics Programming Society and encouraged interdisciplinary problem-solving with numerical techniques and data visualization. Abid pursues a Master's at the University of Dhaka on the basis of the NST Fellowship and balances technical expertise with leadership and mentorship as well as a pursuit of excellence in academics.</p>
-            </li>
-          </ul>
+          <div class="profile-summary-container">
+            <p>Abid Hossain works as a dedicated researcher in computational fluid dynamics, applied simulations, and mathematical epidemiology. With expertise in multistrain epidemic modeling, fluid mechanics, and simulation from data, he has published a number of research papers and contributed to high-impact work such as a UGC-funded game dynamic model for COVID-19. Abid has his work published in renowned journals such as <em>Scientific Reports</em> and <em>Journal of Thermal Analysis and Calorimetry</em> and also presented papers in international conferences such as JTACC and ICMMPE.</p>
+            <p>In addition to his work in research, Abid also serves as an active certified referee for Springer and Elsevier and facilitates high-quality publication of scientific journals. He also founded the Applied Mathematics Programming Society and encouraged interdisciplinary problem-solving with numerical techniques and data visualization. Abid pursues a Master's at the University of Dhaka on the basis of the NST Fellowship and balances technical expertise with leadership and mentorship as well as a pursuit of excellence in academics.</p>
+          </div>
         </section>
 
         <section>
