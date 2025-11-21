@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,107 +6,54 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Abid Hossain | Portfolio</title>
-
   <link rel="icon" type="image/png" href="https://media.licdn.com/dms/image/v2/D5603AQEO8YRJxALKjw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707559936241?e=1764201600&v=beta&t=Tk0yAFJig3nNSzBMdMIVbXcZwErq5dJQ502KBodWccQ" />
-  <link rel="shortcut icon" href="https://media.licdn.com/dms/image/v2/D5603AQEO8YRJxALKjw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707559936241?e=1764201600&v=beta&t=Tk0yAFJig3nNSzBMdMIVbXcZwErq5dJQ502KBodWccQ" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
   <style>
     :root {
       --bg-dark: #0a0a0a;
       --bg-secondary: #121212;
-      --card-bg: rgba(18, 18, 18, 0.7);
-      --card-hover: rgba(25, 25, 25, 0.9);
+      --card-bg: rgba(18,18,18,0.7);
+      --card-hover: rgba(25,25,25,0.9);
       --text-main: #F5F5F5;
       --text-secondary: #B0B0B0;
       --text-tertiary: #808080;
       --accent-primary: #00E5CC;
       --accent-secondary: #00B8A3;
-      --accent-gradient: linear-gradient(135deg, #00E5CC 0%, #00B8A3 50%, #008F7A 100%);
-      --metallic-gold: #FFD700;
-      --metallic-silver: #C0C0C0;
-      --border-color: rgba(255, 255, 255, 0.08);
+      --accent-gradient: linear-gradient(135deg,#00E5CC 0%,#00B8A3 50%,#008F7A 100%);
+      --border-color: rgba(255,255,255,0.08);
       --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
       --shadow-md: 0 8px 24px rgba(0,0,0,0.3);
       --shadow-lg: 0 16px 48px rgba(0,0,0,0.4);
-      --shadow-glow: 0 0 30px rgba(0, 229, 204, 0.3);
-      --font-primary: 'Inter', sans-serif;
-      --font-display: 'Space Grotesk', sans-serif;
-      --font-mono: 'Roboto Mono', monospace;
-      --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      --shadow-glow: 0 0 30px rgba(0,229,204,0.3);
+      --font-primary: 'Inter',sans-serif;
+      --font-display: 'Space Grotesk',sans-serif;
+      --font-mono: 'Roboto Mono',monospace;
+      --transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+      --transition-bounce: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
     }
 
-    @keyframes gradient-flow {
-      0% { background-position: 0% 50%; }
-      25% { background-position: 100% 50%; }
-      50% { background-position: 100% 100%; }
-      75% { background-position: 0% 100%; }
-      100% { background-position: 0% 50%; }
-    }
+    @keyframes gradient-flow { 0% { background-position: 0% 50%; } 25% { background-position: 100% 50%; } 50% { background-position: 100% 100%; } 75% { background-position: 0% 100%; } 100% { background-position: 0% 50%; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 20px rgba(0,229,204,0.3); } 50% { box-shadow: 0 0 40px rgba(0,229,204,0.6); } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes progressFill { from { width: 0%; } }
+    @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-
-    @keyframes glow-pulse {
-      0%, 100% { box-shadow: 0 0 20px rgba(0, 229, 204, 0.3); }
-      50% { box-shadow: 0 0 40px rgba(0, 229, 204, 0.6); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes slideInRight {
-      from { opacity: 0; transform: translateX(50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes scaleIn {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-
-    @keyframes progressFill {
-      from { width: 0%; }
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 2rem;
-    }
-
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+    
     body {
       font-family: var(--font-primary);
-      background: linear-gradient(-45deg, #0a0a0a, #1a1a2e, #16213e, #0f3460, #0a0a0a);
+      background: linear-gradient(-45deg,#0a0a0a,#1a1a2e,#16213e,#0f3460,#0a0a0a);
       background-size: 400% 400%;
       animation: gradient-flow 20s ease infinite;
       color: var(--text-main);
@@ -119,1039 +65,207 @@
       overflow-x: hidden;
     }
 
-    /* Loading Screen */
-    #loading-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--bg-dark);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease, visibility 0.5s ease;
-    }
+    #loading-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-dark); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s ease, visibility 0.5s ease; }
+    #loading-screen.hidden { opacity: 0; visibility: hidden; }
+    
+    .loader { width: 80px; height: 80px; border: 4px solid var(--border-color); border-top: 4px solid var(--accent-primary); border-radius: 50%; animation: spin 1s linear infinite; }
+    .loading-text { margin-top: 2rem; font-size: 1.2rem; color: var(--accent-primary); font-weight: 600; }
 
-    #loading-screen.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
+    #particle-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
 
-    .loader {
-      width: 80px;
-      height: 80px;
-      border: 4px solid var(--border-color);
-      border-top: 4px solid var(--accent-primary);
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
+    main { display: flex; width: 100%; max-width: 1300px; background-color: var(--card-bg); border-radius: 24px; box-shadow: var(--shadow-lg); border: 1px solid var(--border-color); backdrop-filter: blur(20px) saturate(180%); overflow: hidden; position: relative; z-index: 1; }
 
-    .loading-text {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      color: var(--accent-primary);
-      font-weight: 600;
-    }
+    a { color: var(--accent-primary); text-decoration: none; transition: var(--transition); }
+    a:hover { color: var(--accent-secondary); text-shadow: 0 0 20px rgba(0,229,204,0.5); }
 
-    /* Particle Canvas */
-    #particle-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 0;
-    }
+    h1, h2, h3, h4, h5 { color: var(--text-main); font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; }
 
-    main {
-      display: flex;
-      width: 100%;
-      max-width: 1300px;
-      background-color: var(--card-bg);
-      border-radius: 24px;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--border-color);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      overflow: hidden;
-      position: relative;
-      z-index: 1;
-    }
-
-    a {
-      color: var(--accent-primary);
-      text-decoration: none;
-      transition: var(--transition-smooth);
-      position: relative;
-    }
-
-    a:hover {
-      color: var(--accent-secondary);
-      text-shadow: 0 0 20px rgba(0, 229, 204, 0.5);
-    }
-
-    h1, h2, h3, h4, h5 {
-      color: var(--text-main);
-      font-family: var(--font-display);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    p, li { 
-      line-height: 1.8; 
-      color: var(--text-secondary); 
-      font-weight: 400;
-    }
-
+    p, li { line-height: 1.8; color: var(--text-secondary); font-weight: 400; }
     p { margin-bottom: 1rem; }
     ul, ol { padding-left: 24px; }
 
-    /* Sidebar */
-    .sidebar {
-      flex: 0 0 90px;
-      padding: 50px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: linear-gradient(180deg, rgba(18, 18, 18, 0.5) 0%, rgba(10, 10, 10, 0.8) 100%);
-      border-right: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      overflow: hidden;
-      gap: 2rem;
-    }
+    .sidebar { flex: 0 0 90px; padding: 50px 0; display: flex; flex-direction: column; align-items: center; background: linear-gradient(180deg,rgba(18,18,18,0.5),rgba(10,10,10,0.8)); border-right: 1px solid var(--border-color); position: sticky; top: 0; height: 100vh; gap: 2rem; }
 
-    .timeline-node {
-      position: relative;
-    }
+    .timeline-node { position: relative; }
+    .timeline-node .icon-box { width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg,rgba(0,229,204,0.1),rgba(0,184,163,0.05)); border: 1.5px solid var(--border-color); display: flex; justify-content: center; align-items: center; font-size: 26px; color: var(--accent-primary); transition: var(--transition-bounce); cursor: pointer; overflow: hidden; }
+    .timeline-node .icon-box.active, .timeline-node .icon-box:hover { background: var(--accent-gradient); color: var(--bg-dark); border-color: var(--accent-primary); box-shadow: var(--shadow-glow); transform: scale(1.15) rotate(-5deg); }
 
-    .timeline-node .icon-box {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, rgba(0, 229, 204, 0.1) 0%, rgba(0, 184, 163, 0.05) 100%);
-      border: 1.5px solid var(--border-color);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 26px;
-      color: var(--accent-primary);
-      transition: var(--transition-bounce);
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
+    .timeline-node::after { content: attr(data-tooltip); position: absolute; left: 75px; background: var(--bg-secondary); color: var(--text-main); padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none; transition: var(--transition); border: 1px solid var(--border-color); box-shadow: var(--shadow-md); z-index: 10; }
+    .timeline-node:hover::after { opacity: 1; left: 85px; }
 
-    .timeline-node .icon-box.active {
-      background: var(--accent-gradient);
-      color: var(--bg-dark);
-      border-color: var(--accent-primary);
-      box-shadow: var(--shadow-glow);
-    }
+    #reading-progress { position: fixed; top: 0; left: 0; height: 4px; background: var(--accent-gradient); width: 0%; z-index: 100; transition: width 0.1s ease; box-shadow: var(--shadow-glow); }
 
-    .timeline-node .icon-box:hover {
-      background: var(--accent-gradient);
-      color: var(--bg-dark);
-      transform: scale(1.15) rotate(-5deg);
-      box-shadow: var(--shadow-glow);
-      border-color: var(--accent-primary);
-    }
-
-    .timeline-node::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      left: 75px;
-      background: var(--bg-secondary);
-      color: var(--text-main);
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: var(--transition-smooth);
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-md);
-      z-index: 10;
-    }
-
-    .timeline-node:hover::after {
-      opacity: 1;
-      left: 85px;
-    }
-
-    /* Reading Progress Bar */
-    #reading-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 4px;
-      background: var(--accent-gradient);
-      width: 0%;
-      z-index: 100;
-      transition: width 0.1s ease;
-      box-shadow: var(--shadow-glow);
-    }
-
-    /* Main Content */
-    .main-content {
-      flex-grow: 1;
-      padding: 60px;
-      overflow-y: auto;
-      height: 100vh;
-      position: relative;
-    }
-
+    .main-content { flex-grow: 1; padding: 60px; overflow-y: auto; height: 100vh; position: relative; }
     .main-content::-webkit-scrollbar { width: 6px; }
-    .main-content::-webkit-scrollbar-track { 
-      background: rgba(255, 255, 255, 0.02); 
-      border-radius: 10px;
-    }
-    .main-content::-webkit-scrollbar-thumb { 
-      background: var(--accent-gradient);
-      border-radius: 10px;
-      transition: var(--transition-smooth);
-    }
+    .main-content::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); border-radius: 10px; }
+    .main-content::-webkit-scrollbar-thumb { background: var(--accent-gradient); border-radius: 10px; transition: var(--transition); }
 
-    /* Header */
-    .header {
-      text-align: center;
-      margin-bottom: 5rem;
-      position: relative;
-      padding: 3rem 0;
-    }
+    .header { text-align: center; margin-bottom: 5rem; padding: 3rem 0; }
+    .name-container { display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 1.5rem; animation: float 6s ease-in-out infinite; }
 
-    .name-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      animation: float 6s ease-in-out infinite;
-    }
+    .header-profile-image { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; margin-bottom: 2rem; border: 4px solid transparent; background: var(--accent-gradient); padding: 4px; box-shadow: var(--shadow-glow); transition: var(--transition-bounce); cursor: pointer; }
+    .header-profile-image:hover { transform: scale(1.08) rotate(3deg); box-shadow: 0 0 50px rgba(0,229,204,0.6); }
 
-    .header-profile-image {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 2rem;
-      border: 4px solid transparent;
-      background: var(--accent-gradient);
-      padding: 4px;
-      box-shadow: var(--shadow-glow);
-      transition: var(--transition-bounce);
-      position: relative;
-      cursor: pointer;
-    }
+    .header h1 { font-size: 4rem; font-weight: 800; margin-bottom: 0; background: linear-gradient(135deg,#FFF,var(--accent-primary),#C0C0C0); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.03em; position: relative; display: inline-block; min-height: 80px; }
+    .header h1::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 100px; height: 4px; background: var(--accent-gradient); border-radius: 2px; box-shadow: var(--shadow-glow); }
+    
+    .typing-cursor { display: inline-block; width: 3px; height: 1em; background: var(--accent-primary); margin-left: 5px; animation: blink 1s infinite; vertical-align: middle; }
 
-    .header-profile-image:hover {
-      transform: scale(1.08) rotate(3deg);
-      box-shadow: 0 0 50px rgba(0, 229, 204, 0.6);
-    }
+    .header > p { font-size: 1.2rem; color: var(--text-secondary); margin-top: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; font-weight: 500; }
 
-    .header h1 {
-      font-size: 4rem;
-      font-weight: 800;
-      margin-bottom: 0;
-      background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-primary) 50%, var(--metallic-silver) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-      letter-spacing: -0.03em;
-      position: relative;
-      display: inline-block;
-      min-height: 80px;
-    }
+    .stats-container { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 2rem; margin: 3rem 0; padding: 2rem; background: rgba(255,255,255,0.02); border-radius: 16px; border: 1px solid var(--border-color); }
 
-    .typing-cursor {
-      display: inline-block;
-      width: 3px;
-      height: 1em;
-      background: var(--accent-primary);
-      margin-left: 5px;
-      animation: blink 1s infinite;
-      vertical-align: middle;
-    }
+    .stat-item { text-align: center; padding: 1.5rem; border-radius: 12px; background: linear-gradient(135deg,rgba(0,229,204,0.1),rgba(0,184,163,0.05)); border: 1px solid var(--border-color); transition: var(--transition); }
+    .stat-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--accent-primary); }
 
-    .header h1::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 4px;
-      background: var(--accent-gradient);
-      border-radius: 2px;
-      box-shadow: var(--shadow-glow);
-    }
+    .stat-number { font-size: 3rem; font-weight: 800; color: var(--accent-primary); font-family: var(--font-display); line-height: 1; }
+    .stat-label { font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem; font-weight: 600; }
 
-    .header > p {
-      font-size: 1.2rem;
-      color: var(--text-secondary);
-      margin-top: 2rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      font-weight: 500;
-    }
+    .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem 3rem; list-style: none; padding: 0; margin-top: 2rem; }
+    .contact-info li { display: flex; align-items: center; gap: 0.75rem; font-family: var(--font-mono); font-size: 0.95rem; color: var(--text-secondary); transition: var(--transition); padding: 10px 20px; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); }
+    .contact-info li:hover { color: var(--accent-primary); background: rgba(0,229,204,0.08); border-color: var(--accent-primary); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .contact-info ion-icon { font-size: 1.3rem; color: var(--accent-primary); }
 
-    /* Stats Counter */
-    .stats-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 2rem;
-      margin: 3rem 0;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.02);
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-    }
+    article > section { margin-bottom: 5rem; position: relative; opacity: 0; }
+    article > section.animate { animation: fadeIn 0.8s ease forwards; }
 
-    .stat-item {
-      text-align: center;
-      padding: 1.5rem;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(0, 229, 204, 0.1) 0%, rgba(0, 184, 163, 0.05) 100%);
-      border: 1px solid var(--border-color);
-      transition: var(--transition-smooth);
-    }
+    .article-title { font-size: 2.5rem; margin-bottom: 3rem; position: relative; padding-bottom: 20px; color: var(--text-main); font-weight: 700; letter-spacing: -0.02em; }
+    .article-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 80px; height: 5px; background: var(--accent-gradient); border-radius: 3px; box-shadow: var(--shadow-glow); }
+    .article-title::before { content: ''; position: absolute; bottom: 5px; left: 90px; width: 40px; height: 5px; background: linear-gradient(90deg,var(--accent-primary),transparent); border-radius: 3px; opacity: 0.5; }
 
-    .stat-item:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--accent-primary);
-    }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.5rem; list-style: none; }
 
-    .stat-number {
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--accent-primary);
-      font-family: var(--font-display);
-      line-height: 1;
-    }
+    .skill-card { background: linear-gradient(135deg,rgba(0,229,204,0.08),rgba(0,184,163,0.04)); padding: 1.5rem; border-radius: 16px; border: 1.5px solid var(--border-color); transition: var(--transition); position: relative; overflow: hidden; }
+    .skill-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent); transition: var(--transition); }
+    .skill-card:hover { transform: translateY(-8px); border-color: var(--accent-primary); box-shadow: var(--shadow-md); }
+    .skill-card:hover::before { left: 100%; }
 
-    .stat-label {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      margin-top: 0.5rem;
-      font-weight: 600;
-    }
+    .skill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+    .skill-name { font-size: 1.05rem; font-weight: 600; color: var(--accent-primary); font-family: var(--font-mono); }
+    .skill-percentage { font-size: 1.2rem; font-weight: 700; color: var(--accent-primary); }
 
-    .contact-info {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem 3rem;
-      list-style: none;
-      padding: 0;
-      margin-top: 2rem;
-    }
+    .skill-bar-bg { width: 100%; height: 10px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
+    .skill-bar-fill { height: 100%; background: var(--accent-gradient); border-radius: 10px; animation: progressFill 2s ease forwards; box-shadow: 0 0 10px rgba(0,229,204,0.5); }
+    .skill-bar-fill::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent); animation: shimmer 2s infinite; }
 
-    .contact-info li {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      transition: var(--transition-smooth);
-      padding: 10px 20px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--border-color);
-    }
+    .timeline-list { list-style: none; padding-left: 0; position: relative; }
+    .timeline-item { position: relative; padding-left: 45px; margin-bottom: 3rem; border-left: 3px solid var(--border-color); padding-top: 5px; padding-bottom: 10px; transition: var(--transition); cursor: pointer; }
+    .timeline-item::before { content: ''; position: absolute; left: -11px; top: 8px; width: 20px; height: 20px; border-radius: 50%; background: var(--bg-dark); border: 4px solid var(--accent-primary); transition: var(--transition-bounce); box-shadow: 0 0 0 0 rgba(0,229,204,0.4); }
+    .timeline-item:hover { border-left-color: var(--accent-primary); }
+    .timeline-item:hover::before { transform: scale(1.3); box-shadow: 0 0 0 10px rgba(0,229,204,0.1); animation: glow-pulse 2s ease-in-out infinite; }
 
-    .contact-info li:hover {
-      color: var(--accent-primary);
-      background: rgba(0, 229, 204, 0.08);
-      border-color: var(--accent-primary);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-    }
+    .timeline-item-title { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text-main); font-weight: 700; }
+    .timeline-item .meta { display: block; font-size: 0.95rem; color: var(--accent-primary); margin-bottom: 1rem; font-family: var(--font-mono); font-weight: 600; }
 
-    .contact-info ion-icon {
-      font-size: 1.3rem;
-      color: var(--accent-primary);
-    }
-
-    /* Section Animations */
-    article > section { 
-      margin-bottom: 5rem; 
-      position: relative;
-      opacity: 0;
-    }
-
-    article > section.animate {
-      animation: fadeIn 0.8s ease forwards;
-    }
-
-    .article-title {
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      position: relative;
-      padding-bottom: 20px;
-      color: var(--text-main);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .article-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 80px;
-      height: 5px;
-      background: var(--accent-gradient);
-      border-radius: 3px;
-      box-shadow: var(--shadow-glow);
-    }
-
-    .article-title::before {
-      content: '';
-      position: absolute;
-      bottom: 5px;
-      left: 90px;
-      width: 40px;
-      height: 5px;
-      background: linear-gradient(90deg, var(--accent-primary), transparent);
-      border-radius: 3px;
-      opacity: 0.5;
-    }
-
-    /* Skills */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      padding: 0;
-      list-style: none;
-    }
-
-    .skill-card {
-      background: linear-gradient(135deg, rgba(0, 229, 204, 0.08) 0%, rgba(0, 184, 163, 0.04) 100%);
-      padding: 1.5rem;
-      border-radius: 16px;
-      border: 1.5px solid var(--border-color);
-      transition: var(--transition-smooth);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .skill-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-      transition: var(--transition-smooth);
-    }
-
-    .skill-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--accent-primary);
-      box-shadow: var(--shadow-md);
-    }
-
-    .skill-card:hover::before {
-      left: 100%;
-    }
-
-    .skill-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    .skill-name {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--accent-primary);
-      font-family: var(--font-mono);
-    }
-
-    .skill-percentage {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--accent-primary);
-    }
-
-    .skill-bar-bg {
-      width: 100%;
-      height: 10px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .skill-bar-fill {
-      height: 100%;
-      background: var(--accent-gradient);
-      border-radius: 10px;
-      position: relative;
-      animation: progressFill 2s ease forwards;
-      box-shadow: 0 0 10px rgba(0, 229, 204, 0.5);
-    }
-
-    .skill-bar-fill::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      animation: shimmer 2s infinite;
-    }
-
-    @keyframes shimmer {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-
-    /* Timeline */
-    .timeline-list { 
-      list-style: none; 
-      padding-left: 0; 
-      position: relative;
-    }
-
-    .timeline-item {
-      position: relative;
-      padding-left: 45px;
-      margin-bottom: 3rem;
-      border-left: 3px solid var(--border-color);
-      padding-top: 5px;
-      padding-bottom: 10px;
-      transition: var(--transition-smooth);
-      cursor: pointer;
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -11px;
-      top: 8px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--bg-dark);
-      border: 4px solid var(--accent-primary);
-      transition: var(--transition-bounce);
-      box-shadow: 0 0 0 0 rgba(0, 229, 204, 0.4);
-    }
-
-    .timeline-item:hover {
-      border-left-color: var(--accent-primary);
-    }
-
-    .timeline-item:hover::before {
-      transform: scale(1.3);
-      box-shadow: 0 0 0 10px rgba(0, 229, 204, 0.1);
-      animation: glow-pulse 2s ease-in-out infinite;
-    }
-
-    .timeline-item-title { 
-      font-size: 1.4rem; 
-      margin-bottom: 0.5rem; 
-      color: var(--text-main); 
-      font-weight: 700;
-    }
-
-    .timeline-item .meta {
-      display: block;
-      font-size: 0.95rem;
-      color: var(--accent-primary);
-      margin-bottom: 1rem;
-      font-family: var(--font-mono);
-      font-weight: 600;
-    }
-
-    .timeline-text { 
-      font-size: 1.05rem; 
-      color: var(--text-secondary);
-      max-height: 500px;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
-    }
-
-    .timeline-item.collapsed .timeline-text {
-      max-height: 0;
-    }
-
+    .timeline-text { font-size: 1.05rem; color: var(--text-secondary); max-height: 500px; overflow: hidden; transition: max-height 0.5s ease; }
+    .timeline-item.collapsed .timeline-text { max-height: 0; }
     .timeline-text ul { margin-top: 1rem; }
-    .timeline-text li { 
-      color: var(--text-secondary);
-      margin-bottom: 0.5rem;
-      position: relative;
-      padding-left: 5px;
-    }
+    .timeline-text li { color: var(--text-secondary); margin-bottom: 0.5rem; padding-left: 5px; }
 
-    .expand-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: rgba(0, 229, 204, 0.1);
-      color: var(--accent-primary);
-      border: 1px solid var(--accent-primary);
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition-smooth);
-    }
+    .expand-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; padding: 0.5rem 1rem; background: rgba(0,229,204,0.1); color: var(--accent-primary); border: 1px solid var(--accent-primary); border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
+    .expand-btn:hover { background: var(--accent-primary); color: var(--bg-dark); transform: translateX(5px); }
 
-    .expand-btn:hover {
-      background: var(--accent-primary);
-      color: var(--bg-dark);
-      transform: translateX(5px);
-    }
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 2rem; list-style: none; }
 
-    /* Projects Grid */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      list-style: none;
-      padding: 0;
-    }
+    .project-card { position: relative; background: rgba(255,255,255,0.02); border-radius: 16px; border: 1px solid var(--border-color); overflow: hidden; transition: var(--transition); cursor: pointer; }
+    .project-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--accent-gradient); opacity: 0; transition: var(--transition); }
+    .project-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); border-color: var(--accent-primary); }
+    .project-card:hover::before { opacity: 0.1; }
 
-    .project-card {
-      position: relative;
-      background: rgba(255, 255, 255, 0.02);
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-      overflow: hidden;
-      transition: var(--transition-smooth);
-      cursor: pointer;
-    }
+    .project-card-content { padding: 2rem; position: relative; z-index: 1; }
+    .project-icon { font-size: 3rem; color: var(--accent-primary); margin-bottom: 1rem; transition: var(--transition-bounce); }
+    .project-card:hover .project-icon { transform: scale(1.2) rotate(10deg); }
 
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--accent-gradient);
-      opacity: 0;
-      transition: var(--transition-smooth);
-    }
+    .project-title { font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.75rem; }
+    .project-description { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; }
+    .project-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; color: var(--accent-primary); font-weight: 600; transition: var(--transition); }
+    .project-card:hover .project-link { transform: translateX(10px); }
 
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent-primary);
-    }
+    .publication-list { list-style: none; padding-left: 0; }
+    .publication-item { margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 16px; border: 1px solid var(--border-color); transition: var(--transition); cursor: pointer; }
+    .publication-item:hover { background: rgba(255,255,255,0.04); border-color: var(--accent-primary); box-shadow: var(--shadow-md); transform: translateX(5px); }
+    .publication-item p { margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 1.05rem; }
 
-    .project-card:hover::before {
-      opacity: 0.1;
-    }
+    .citation { font-weight: 700; color: var(--accent-primary); font-family: var(--font-mono); background: rgba(0,229,204,0.1); padding: 4px 12px; border-radius: 6px; display: inline-block; margin-top: 0.5rem; }
 
-    .project-card-content {
-      padding: 2rem;
-      position: relative;
-      z-index: 1;
-    }
+    .publication-details { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; margin-top: 1rem; padding-top: 0; border-top: 1px solid transparent; }
+    .publication-item.expanded .publication-details { max-height: 500px; padding-top: 1rem; border-top-color: var(--border-color); }
 
-    .project-icon {
-      font-size: 3rem;
-      color: var(--accent-primary);
-      margin-bottom: 1rem;
-      transition: var(--transition-bounce);
-    }
+    .profile-summary-container { background: rgba(255,255,255,0.02); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border-color); transition: var(--transition); }
+    .profile-summary-container:hover { background: rgba(255,255,255,0.03); border-color: rgba(0,229,204,0.3); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+    .profile-summary-container p { line-height: 1.9; font-size: 1.05rem; margin-bottom: 1rem; }
 
-    .project-card:hover .project-icon {
-      transform: scale(1.2) rotate(10deg);
-    }
+    .contact-section { margin-top: 6rem; padding: 4rem 0; border-top: 1px solid var(--border-color); }
 
-    .project-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 0.75rem;
-    }
+    .contact-form-container { max-width: 700px; margin: 0 auto; padding: 3rem; background: linear-gradient(135deg,rgba(0,229,204,0.05),rgba(0,184,163,0.02)); border-radius: 20px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md); position: relative; overflow: hidden; }
+    .contact-form-description { text-align: center; color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 1.05rem; }
 
-    .project-description {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
+    label { display: block; color: var(--text-main); font-weight: 600; margin-bottom: 0.75rem; font-size: 1rem; }
 
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-      color: var(--accent-primary);
-      font-weight: 600;
-      transition: var(--transition-smooth);
-    }
+    input[type="email"], textarea { width: 100%; padding: 1rem 1.25rem; background: rgba(255,255,255,0.03); border: 1.5px solid var(--border-color); border-radius: 12px; color: var(--text-main); font-size: 1rem; font-family: var(--font-primary); transition: var(--transition); margin-bottom: 1.5rem; }
+    input[type="email"]:focus, textarea:focus { outline: none; background: rgba(255,255,255,0.05); border-color: var(--accent-primary); box-shadow: 0 0 0 4px rgba(0,229,204,0.1); }
+    input[type="email"].error, textarea.error { border-color: #ff4444; }
+    input[type="email"]::placeholder, textarea::placeholder { color: var(--text-tertiary); }
 
-    .project-card:hover .project-link {
-      transform: translateX(10px);
-    }
+    textarea { min-height: 150px; resize: vertical; }
 
-    /* Publications */
-    .publication-list { 
-      list-style: none; 
-      padding-left: 0; 
-    }
+    .char-counter { text-align: right; font-size: 0.85rem; color: var(--text-tertiary); margin-top: -1rem; margin-bottom: 1rem; }
 
-    .publication-item { 
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      background: rgba(255, 255, 255, 0.02);
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-      transition: var(--transition-smooth);
-      position: relative;
-      cursor: pointer;
-    }
+    button[type="submit"] { width: 100%; padding: 1.25rem; background: var(--accent-gradient); color: var(--bg-dark); border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 700; font-family: var(--font-display); cursor: pointer; transition: var(--transition-bounce); box-shadow: var(--shadow-md); overflow: hidden; letter-spacing: 0.03em; text-transform: uppercase; }
+    button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
+    button[type="submit"]:hover:not(:disabled) { transform: translateY(-3px) scale(1.02); box-shadow: var(--shadow-glow); }
 
-    .publication-item:hover {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: var(--accent-primary);
-      box-shadow: var(--shadow-md);
-      transform: translateX(5px);
-    }
+    .form-message { padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem; font-weight: 600; text-align: center; display: none; }
+    .form-message.success { background: rgba(0,229,204,0.1); border: 1px solid var(--accent-primary); color: var(--accent-primary); }
+    .form-message.error { background: rgba(255,0,0,0.1); border: 1px solid #ff4444; color: #ff4444; }
 
-    .publication-item p { 
-      margin-bottom: 0.5rem; 
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-    }
-
-    .citation { 
-      font-weight: 700; 
-      color: var(--accent-primary); 
-      font-family: var(--font-mono);
-      background: rgba(0, 229, 204, 0.1);
-      padding: 4px 12px;
-      border-radius: 6px;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-
-    .publication-details {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
-      margin-top: 1rem;
-      padding-top: 0;
-      border-top: 1px solid transparent;
-    }
-
-    .publication-item.expanded .publication-details {
-      max-height: 500px;
-      padding-top: 1rem;
-      border-top-color: var(--border-color);
-    }
-
-    /* Profile Summary */
-    .profile-summary-container {
-      background: rgba(255, 255, 255, 0.02);
-      padding: 1.5rem;
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-      transition: var(--transition-smooth);
-    }
-
-    .profile-summary-container:hover {
-      background: rgba(255, 255, 255, 0.03);
-      border-color: rgba(0, 229, 204, 0.3);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    .profile-summary-container p {
-      line-height: 1.9;
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Contact Section */
-    .contact-section {
-      margin-top: 6rem;
-      padding: 4rem 0;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .contact-form-container {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 3rem;
-      background: linear-gradient(135deg, rgba(0, 229, 204, 0.05) 0%, rgba(0, 184, 163, 0.02) 100%);
-      border-radius: 20px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-md);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-form-description {
-      text-align: center;
-      color: var(--text-secondary);
-      margin-bottom: 2.5rem;
-      font-size: 1.05rem;
-    }
-
-    label {
-      display: block;
-      color: var(--text-main);
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      font-size: 1rem;
-    }
-
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 1rem 1.25rem;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1.5px solid var(--border-color);
-      border-radius: 12px;
-      color: var(--text-main);
-      font-size: 1rem;
-      font-family: var(--font-primary);
-      transition: var(--transition-smooth);
-      margin-bottom: 1.5rem;
-    }
-
-    input[type="email"]:focus,
-    textarea:focus {
-      outline: none;
-      background: rgba(255, 255, 255, 0.05);
-      border-color: var(--accent-primary);
-      box-shadow: 0 0 0 4px rgba(0, 229, 204, 0.1);
-    }
-
-    input[type="email"].error,
-    textarea.error {
-      border-color: #ff4444;
-    }
-
-    input[type="email"]::placeholder,
-    textarea::placeholder {
-      color: var(--text-tertiary);
-    }
-
-    textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    .char-counter {
-      text-align: right;
-      font-size: 0.85rem;
-      color: var(--text-tertiary);
-      margin-top: -1rem;
-      margin-bottom: 1rem;
-    }
-
-    button[type="submit"] {
-      width: 100%;
-      padding: 1.25rem;
-      background: var(--accent-gradient);
-      color: var(--bg-dark);
-      border: none;
-      border-radius: 12px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      font-family: var(--font-display);
-      cursor: pointer;
-      transition: var(--transition-bounce);
-      box-shadow: var(--shadow-md);
-      position: relative;
-      overflow: hidden;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
-
-    button[type="submit"]:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    button[type="submit"]:hover:not(:disabled) {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: var(--shadow-glow);
-    }
-
-    .form-message {
-      padding: 1rem;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-      text-align: center;
-      display: none;
-    }
-
-    .form-message.success {
-      background: rgba(0, 229, 204, 0.1);
-      border: 1px solid var(--accent-primary);
-      color: var(--accent-primary);
-    }
-
-    .form-message.error {
-      background: rgba(255, 0, 0, 0.1);
-      border: 1px solid #ff4444;
-      color: #ff4444;
-    }
-
-    /* Responsive */
     @media (max-width: 992px) {
       body { padding: 0; }
-      main { 
-        flex-direction: column; 
-        border-radius: 0; 
-        min-height: 100vh; 
-      }
-      
-      .sidebar {
-        flex-direction: row;
-        width: 100%;
-        height: auto;
-        padding: 20px;
-        justify-content: space-around;
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-        position: static;
-        gap: 1rem;
-      }
-      
-      .timeline-node::after {
-        display: none;
-      }
-      
-      .main-content { 
-        height: auto; 
-        padding: 40px 30px;
-      }
-      
-      .project-grid,
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      main { flex-direction: column; border-radius: 0; min-height: 100vh; }
+      .sidebar { flex-direction: row; width: 100%; height: auto; padding: 20px; justify-content: space-around; border-right: none; border-bottom: 1px solid var(--border-color); position: static; gap: 1rem; }
+      .timeline-node::after { display: none; }
+      .main-content { height: auto; padding: 40px 30px; }
+      .project-grid, .skills-grid { grid-template-columns: 1fr; }
+      .stats-container { grid-template-columns: repeat(2,1fr); }
     }
 
     @media (max-width: 768px) {
       .main-content { padding: 30px 20px; }
-      
       .header h1 { font-size: 2.8rem; }
-      
       .article-title { font-size: 2rem; }
-      
-      .contact-info { 
-        gap: 1rem; 
-        flex-direction: column; 
-        align-items: center;
-      }
-      
-      .header-profile-image {
-        width: 180px;
-        height: 180px;
-      }
-      
-      .contact-form-container {
-        padding: 2rem 1.5rem;
-      }
-      
-      .timeline-item {
-        padding-left: 35px;
-      }
-
-      .stats-container {
-        grid-template-columns: 1fr;
-      }
+      .contact-info { gap: 1rem; flex-direction: column; align-items: center; }
+      .header-profile-image { width: 180px; height: 180px; }
+      .contact-form-container { padding: 2rem 1.5rem; }
+      .timeline-item { padding-left: 35px; }
+      .stats-container { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 480px) {
       .header h1 { font-size: 2.2rem; }
-      
       .article-title { font-size: 1.6rem; }
-      
-      .sidebar {
-        padding: 15px 10px;
-        gap: 0.5rem;
-      }
-      
-      .timeline-node .icon-box {
-        width: 48px;
-        height: 48px;
-        font-size: 22px;
-      }
+      .sidebar { padding: 15px 10px; gap: 0.5rem; }
+      .timeline-node .icon-box { width: 48px; height: 48px; font-size: 22px; }
     }
   </style>
 </head>
 <body>
-  <!-- Loading Screen -->
   <div id="loading-screen">
     <div class="loader"></div>
     <div class="loading-text">Loading Portfolio...</div>
   </div>
 
-  <!-- Reading Progress Bar -->
   <div id="reading-progress"></div>
-
-  <!-- Particle Background -->
   <canvas id="particle-canvas"></canvas>
 
   <main>
     <aside class="sidebar">
-      <div class="timeline-node" data-tooltip="Profile" data-section="profile-summary">
-        <div class="icon-box" onclick="scrollToSection('profile-summary')">
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="timeline-node" data-tooltip="Skills" data-section="top-skills">
-        <div class="icon-box" onclick="scrollToSection('top-skills')">
-          <ion-icon name="sparkles-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="timeline-node" data-tooltip="Experience" data-section="experience">
-        <div class="icon-box" onclick="scrollToSection('experience')">
-          <ion-icon name="briefcase-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="timeline-node" data-tooltip="Projects" data-section="projects-done">
-        <div class="icon-box" onclick="scrollToSection('projects-done')">
-          <ion-icon name="folder-open-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="timeline-node" data-tooltip="Publications" data-section="publications">
-        <div class="icon-box" onclick="scrollToSection('publications')">
-          <ion-icon name="newspaper-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="timeline-node" data-tooltip="Education" data-section="education">
-        <div class="icon-box" onclick="scrollToSection('education')">
-          <ion-icon name="school-outline"></ion-icon>
-        </div>
-      </div>
-      <div class="timeline-node" data-tooltip="Contact" data-section="contact">
-        <div class="icon-box" onclick="scrollToSection('contact')">
-          <ion-icon name="mail-outline"></ion-icon>
-        </div>
-      </div>
+      <div class="timeline-node" data-tooltip="Profile" data-section="profile-summary"><div class="icon-box" onclick="scrollToSection('profile-summary')"><ion-icon name="person-outline"></ion-icon></div></div>
+      <div class="timeline-node" data-tooltip="Skills" data-section="top-skills"><div class="icon-box" onclick="scrollToSection('top-skills')"><ion-icon name="sparkles-outline"></ion-icon></div></div>
+      <div class="timeline-node" data-tooltip="Experience" data-section="experience"><div class="icon-box" onclick="scrollToSection('experience')"><ion-icon name="briefcase-outline"></ion-icon></div></div>
+      <div class="timeline-node" data-tooltip="Projects" data-section="projects-done"><div class="icon-box" onclick="scrollToSection('projects-done')"><ion-icon name="folder-open-outline"></ion-icon></div></div>
+      <div class="timeline-node" data-tooltip="Publications" data-section="publications"><div class="icon-box" onclick="scrollToSection('publications')"><ion-icon name="newspaper-outline"></ion-icon></div></div>
+      <div class="timeline-node" data-tooltip="Education" data-section="education"><div class="icon-box" onclick="scrollToSection('education')"><ion-icon name="school-outline"></ion-icon></div></div>
+      <div class="timeline-node" data-tooltip="Contact" data-section="contact"><div class="icon-box" onclick="scrollToSection('contact')"><ion-icon name="mail-outline"></ion-icon></div></div>
     </aside>
 
     <div class="main-content" id="mainContent">
@@ -1163,699 +277,149 @@
           </div>
           <p id="typed-description"></p>
 
-          <!-- Stats Counter -->
           <div class="stats-container">
-            <div class="stat-item">
-              <div class="stat-number" data-target="3">0</div>
-              <div class="stat-label">Publications</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="16">0</div>
-              <div class="stat-label">Citations</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="3">0</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="5">0</div>
-              <div class="stat-label">Projects</div>
-            </div>
+            <div class="stat-item"><div class="stat-number" data-target="3">0</div><div class="stat-label">Publications</div></div>
+            <div class="stat-item"><div class="stat-number" data-target="16">0</div><div class="stat-label">Citations</div></div>
+            <div class="stat-item"><div class="stat-number" data-target="3">0</div><div class="stat-label">Years Experience</div></div>
+            <div class="stat-item"><div class="stat-number" data-target="5">0</div><div class="stat-label">Projects</div></div>
           </div>
 
           <ul class="contact-info">
-            <li>
-              <ion-icon name="mail-outline"></ion-icon> 
-              <a href="mailto:abid28266@gmail.com">abid28266@gmail.com</a>
-            </li>
-            <li>
-              <ion-icon name="location-outline"></ion-icon> 
-              Dhaka, Bangladesh
-            </li>
+            <li><ion-icon name="mail-outline"></ion-icon><a href="mailto:abid28266@gmail.com">abid28266@gmail.com</a></li>
+            <li><ion-icon name="location-outline"></ion-icon>Dhaka, Bangladesh</li>
           </ul>
           <ul class="contact-info">
-            <li>
-              <ion-icon name="logo-github"></ion-icon> 
-              <a href="https://github.com/abidhossainsadat" target="_blank">GitHub</a>
-            </li>
-            <li>
-              <ion-icon name="logo-linkedin"></ion-icon> 
-              <a href="https://www.linkedin.com/in/abid-hossain-089347239/" target="_blank">LinkedIn</a>
-            </li>
-            <li>
-              <ion-icon name="school-outline"></ion-icon> 
-              <a href="https://scholar.google.com/citations?user=ayPQ5jEAAAAJ" target="_blank">Google Scholar</a>
-            </li>
+            <li><ion-icon name="logo-github"></ion-icon><a href="https://github.com/abidhossainsadat" target="_blank">GitHub</a></li>
+            <li><ion-icon name="logo-linkedin"></ion-icon><a href="https://www.linkedin.com/in/abid-hossain-089347239/" target="_blank">LinkedIn</a></li>
+            <li><ion-icon name="school-outline"></ion-icon><a href="https://scholar.google.com/citations?user=ayPQ5jEAAAAJ" target="_blank">Google Scholar</a></li>
           </ul>
         </section>
 
-        <section id="profile-summary">
-          <h2 class="article-title">Profile Summary</h2>
-          <div class="profile-summary-container">
-            <p>Abid Hossain works as a dedicated researcher in computational fluid dynamics, applied simulations, and mathematical epidemiology. With expertise in multistrain epidemic modeling, fluid mechanics, and simulation from data, he has published a number of research papers and contributed to high-impact work such as a UGC-funded game dynamic model for COVID-19. Abid has his work published in renowned journals such as <em>Scientific Reports</em> and <em>Journal of Thermal Analysis and Calorimetry</em> and also presented papers in international conferences such as JTACC and ICMMPE.</p>
-            <p>In addition to his work in research, Abid also serves as an active certified referee for Springer and Elsevier and facilitates high-quality publication of scientific journals. He also founded the Applied Mathematics Programming Society and encouraged interdisciplinary problem-solving with numerical techniques and data visualization. Abid pursues a Master's at the University of Dhaka on the basis of the NST Fellowship and balances technical expertise with leadership and mentorship as well as a pursuit of excellence in academics.</p>
-          </div>
-        </section>
+        <section id="profile-summary"><h2 class="article-title">Profile Summary</h2><div class="profile-summary-container"><p>Abid Hossain works as a dedicated researcher in computational fluid dynamics, applied simulations, and mathematical epidemiology. With expertise in multistrain epidemic modeling, fluid mechanics, and simulation from data, he has published a number of research papers and contributed to high-impact work such as a UGC-funded game dynamic model for COVID-19. Abid has his work published in renowned journals such as <em>Scientific Reports</em> and <em>Journal of Thermal Analysis and Calorimetry</em> and also presented papers in international conferences such as JTACC and ICMMPE.</p><p>In addition to his work in research, Abid also serves as an active certified referee for Springer and Elsevier and facilitates high-quality publication of scientific journals. He also founded the Applied Mathematics Programming Society and encouraged interdisciplinary problem-solving with numerical techniques and data visualization. Abid pursues a Master's at the University of Dhaka on the basis of the NST Fellowship and balances technical expertise with leadership and mentorship as well as a pursuit of excellence in academics.</p></div></section>
 
-        <section id="top-skills">
-          <h2 class="article-title">Top Skills</h2>
-          <ul class="skills-grid">
-            <li class="skill-card">
-              <div class="skill-header">
-                <span class="skill-name">Computational Fluid Dynamics</span>
-                 
-              </div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill" style="width: 95%;"></div>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-header">
-                <span class="skill-name">Machine Learning</span>
-                 
-              </div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill" style="width: 90%;"></div>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-header">
-                <span class="skill-name">Deep Learning</span>
-                 
-              </div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill" style="width: 85%;"></div>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-header">
-                <span class="skill-name">Data Analysis</span>
-                 
-              </div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill" style="width: 92%;"></div>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-header">
-                <span class="skill-name">Game Theory</span>
-                 
-              </div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill" style="width: 88%;"></div>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-header">
-                <span class="skill-name">Optimal Control</span>
-                 
-              </div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill" style="width: 85%;"></div>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-header">
-                <span class="skill-name">Journal Reviewing</span>
-                 
-              </div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill" style="width: 93%;"></div>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-header">
-                <span class="skill-name">Team Collaboration</span>
-                
-              </div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill" style="width: 90%;"></div>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-header">
-                <span class="skill-name">Critical Thinking</span>
-                 
-              </div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill" style="width: 95%;"></div>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-header">
-                <span class="skill-name">Problem-solving</span>
-                 
-              </div>
-              <div class="skill-bar-bg">
-                <div class="skill-bar-fill" style="width: 94%;"></div>
-              </div>
-            </li>
-          </ul>
-        </section>
+        <section id="top-skills"><h2 class="article-title">Top Skills</h2><ul class="skills-grid">
+          <li class="skill-card"><div class="skill-header"><span class="skill-name">Computational Fluid Dynamics</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%"></div></div></li>
+          <li class="skill-card"><div class="skill-header"><span class="skill-name">Machine Learning</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div></li>
+          <li class="skill-card"><div class="skill-header"><span class="skill-name">Deep Learning</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div></li>
+          <li class="skill-card"><div class="skill-header"><span class="skill-name">Data Analysis</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:92%"></div></div></li>
+          <li class="skill-card"><div class="skill-header"><span class="skill-name">Game Theory</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div></li>
+          <li class="skill-card"><div class="skill-header"><span class="skill-name">Optimal Control</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div></li>
+          <li class="skill-card"><div class="skill-header"><span class="skill-name">Journal Reviewing</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:93%"></div></div></li>
+          <li class="skill-card"><div class="skill-header"><span class="skill-name">Team Collaboration</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div></li>
+          <li class="skill-card"><div class="skill-header"><span class="skill-name">Critical Thinking</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%"></div></div></li>
+          <li class="skill-card"><div class="skill-header"><span class="skill-name">Problem-solving</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:94%"></div></div></li>
+        </ul></section>
 
-        <section id="experience">
-          <h2 class="article-title">Experience</h2>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="timeline-item-title">Research Assistant</h4>
-              <span class="meta">Muntasir's Lab on Evolutionary Game Theory | Jul 2024 - Present</span>
-              <div class="timeline-text">
-                <ul>
-                  <li>Authored 2 research articles on optimal control in epidemic game-theoretic models.</li>
-                  <li>Developed a Multistrain Game Dynamic Epidemic Model using COVID-19 data that influenced policy recommendation.</li>
-                </ul>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <h4 class="timeline-item-title">Researcher</h4>
-              <span class="meta">Fluid Flow Modeling &amp; Simulation Group | Mar 2022 - Jun 2024</span>
-              <div class="timeline-text">
-                <ul>
-                  <li>Published 3 articles and 2 under review in high-impact journals (17 citations).</li>
-                  <li>Conducted research in fluid dynamics, nanofluidics, heat transfer, and microfluidics.</li>
-                </ul>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <h4 class="timeline-item-title">Computational Simulation Engineer</h4>
-              <span class="meta">Society for Industrial and Applied Mathematics (SIAM) | Oct 2023 - Dec 2024</span>
-              <div class="timeline-text">
-                <ul>
-                  <li>Developed advanced simulation models for Traffic Flow modeling.</li>
-                  <li>Improved processes in Gas Molecule Dynamics, Traffic Control, and Heat Transfer.</li>
-                </ul>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <h4 class="timeline-item-title">Journal Reviewer (Volunteer)</h4>
-              <span class="meta">Elsevier &amp; Nature | Dec 2023 - Present</span>
-              <div class="timeline-text">
-                <ul>
-                  <li>Reviewed advanced research in CFD, Heat Transfer, and Nanofluidics for journals including <i>Journal of Fluid and Structures</i>, <i>International Journal of Heat and Fluid Flow</i>, <i>Journal of Thermal Analysis and Calorimetry</i>, and <i>Scientific Reports</i>.</li>
-                  <li>Ensured the publication of superior scientific papers by editing and enhancing submitted manuscripts to meet high scholarly standards.</li>
-                </ul>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <h4 class="timeline-item-title">Founder</h4>
-              <span class="meta">Applied Mathematics Programming Society | Jan 2023 - Present</span>
-              <div class="timeline-text">
-                <p>Dhaka, Bangladesh</p>
-                <ul>
-                  <li>Enhanced accuracy and clarity in fields like climate modeling, transport modeling, and epidemiology by combining numerical methods, data visualization, and particle-based simulations.</li>
-                  <li>Fostered teamwork and bridged the gap between academia and industry by equipping members with essential computational tools (Python, MATLAB, Mathematica, C++).</li>
-                </ul>
-              </div>
-            </li>
-          </ol>
-        </section>
+        <section id="experience"><h2 class="article-title">Experience</h2><ol class="timeline-list">
+          <li class="timeline-item"><h4 class="timeline-item-title">Research Assistant</h4><span class="meta">Muntasir's Lab on Evolutionary Game Theory | Jul 2024 - Present</span><div class="timeline-text"><ul><li>Authored 2 research articles on optimal control in epidemic game-theoretic models.</li><li>Developed a Multistrain Game Dynamic Epidemic Model using COVID-19 data that influenced policy recommendation.</li></ul></div></li>
+          <li class="timeline-item"><h4 class="timeline-item-title">Researcher</h4><span class="meta">Fluid Flow Modeling &amp; Simulation Group | Mar 2022 - Jun 2024</span><div class="timeline-text"><ul><li>Published 3 articles and 2 under review in high-impact journals (17 citations).</li><li>Conducted research in fluid dynamics, nanofluidics, heat transfer, and microfluidics.</li></ul></div></li>
+          <li class="timeline-item"><h4 class="timeline-item-title">Computational Simulation Engineer</h4><span class="meta">Society for Industrial and Applied Mathematics (SIAM) | Oct 2023 - Dec 2024</span><div class="timeline-text"><ul><li>Developed advanced simulation models for Traffic Flow modeling.</li><li>Improved processes in Gas Molecule Dynamics, Traffic Control, and Heat Transfer.</li></ul></div></li>
+          <li class="timeline-item"><h4 class="timeline-item-title">Journal Reviewer (Volunteer)</h4><span class="meta">Elsevier &amp; Nature | Dec 2023 - Present</span><div class="timeline-text"><ul><li>Reviewed advanced research in CFD, Heat Transfer, and Nanofluidics for journals including <i>Journal of Fluid and Structures</i>, <i>International Journal of Heat and Fluid Flow</i>, <i>Journal of Thermal Analysis and Calorimetry</i>, and <i>Scientific Reports</i>.</li><li>Ensured the publication of superior scientific papers by editing and enhancing submitted manuscripts to meet high scholarly standards.</li></ul></div></li>
+          <li class="timeline-item"><h4 class="timeline-item-title">Founder</h4><span class="meta">Applied Mathematics Programming Society | Jan 2023 - Present</span><div class="timeline-text"><p>Dhaka, Bangladesh</p><ul><li>Enhanced accuracy and clarity in fields like climate modeling, transport modeling, and epidemiology by combining numerical methods, data visualization, and particle-based simulations.</li><li>Fostered teamwork and bridged the gap between academia and industry by equipping members with essential computational tools (Python, MATLAB, Mathematica, C++).</li></ul></div></li>
+        </ol></section>
 
-        <section id="projects-done">
-          <h2 class="article-title">Projects Done</h2>
-          <ul class="project-grid">
-            <li class="project-card">
-              <div class="project-card-content">
-                <ion-icon name="analytics-outline" class="project-icon"></ion-icon>
-                <h3 class="project-title">Epidemic Simulation (SIR Model)</h3>
-                <p class="project-description">Interactive simulation of epidemic spread using SIR mathematical model</p>
-                <a href="https://abidhossainsadat.github.io/Epidemic_Simulation_SIR/" target="_blank" class="project-link">
-                  View Project <ion-icon name="arrow-forward-outline"></ion-icon>
-                </a>
-              </div>
-            </li>
-            <li class="project-card">
-              <div class="project-card-content">
-                <ion-icon name="bar-chart-outline" class="project-icon"></ion-icon>
-                <h3 class="project-title">Integration Visualization</h3>
-                <p class="project-description">Visual representation of mathematical integration concepts</p>
-                <a href="https://abidhossainsadat.github.io/Integration-Visualization/" target="_blank" class="project-link">
-                  View Project <ion-icon name="arrow-forward-outline"></ion-icon>
-                </a>
-              </div>
-            </li>
-            <li class="project-card">
-              <div class="project-card-content">
-                <ion-icon name="pulse-outline" class="project-icon"></ion-icon>
-                <h3 class="project-title">SIRS Epidemic Simulation</h3>
-                <p class="project-description">Advanced epidemic model incorporating immunity loss over time</p>
-                <a href="https://abidhossainsadat.github.io/SIRS-epidemic-simulation-with-waning-immunity/" target="_blank" class="project-link">
-                  View Project <ion-icon name="arrow-forward-outline"></ion-icon>
-                </a>
-              </div>
-            </li>
-            <li class="project-card">
-              <div class="project-card-content">
-                <ion-icon name="cube-outline" class="project-icon"></ion-icon>
-                <h3 class="project-title">Volume Under Revolution</h3>
-                <p class="project-description">3D visualization of volumes generated by revolving curves</p>
-                <a href="https://abidhossainsadat.github.io/Volume-under-revolution/" target="_blank" class="project-link">
-                  View Project <ion-icon name="arrow-forward-outline"></ion-icon>
-                </a>
-              </div>
-            </li>
-            <li class="project-card">
-  <div class="project-card-content">
-    <ion-icon name="navigate-outline" class="project-icon"></ion-icon>
-    <h3 class="project-title">DQN Pathfinding & Neural Monitor</h3>
-    <p class="project-description">
-      Interactive AI visualization using Deep Q-Networks. The network learns to navigate from start to goal while avoiding obstacles. Watch neural activations change as it learns!
-    </p>
-    <a href="https://abidhossainsadat.github.io/DNN_Path_Finding/" target="_blank" class="project-link">
-      View Project
-      <ion-icon name="arrow-forward-outline"></ion-icon>
-    </a>
-  </div>
-</li>
-          </ul>
-        </section>
+        <section id="projects-done"><h2 class="article-title">Projects Done</h2><ul class="project-grid">
+          <li class="project-card"><div class="project-card-content"><ion-icon name="analytics-outline" class="project-icon"></ion-icon><h3 class="project-title">Epidemic Simulation (SIR Model)</h3><p class="project-description">Interactive simulation of epidemic spread using SIR mathematical model</p><a href="https://abidhossainsadat.github.io/Epidemic_Simulation_SIR/" target="_blank" class="project-link">View Project<ion-icon name="arrow-forward-outline"></ion-icon></a></div></li>
+          <li class="project-card"><div class="project-card-content"><ion-icon name="bar-chart-outline" class="project-icon"></ion-icon><h3 class="project-title">Integration Visualization</h3><p class="project-description">Visual representation of mathematical integration concepts</p><a href="https://abidhossainsadat.github.io/Integration-Visualization/" target="_blank" class="project-link">View Project<ion-icon name="arrow-forward-outline"></ion-icon></a></div></li>
+          <li class="project-card"><div class="project-card-content"><ion-icon name="pulse-outline" class="project-icon"></ion-icon><h3 class="project-title">SIRS Epidemic Simulation</h3><p class="project-description">Advanced epidemic model incorporating immunity loss over time</p><a href="https://abidhossainsadat.github.io/SIRS-epidemic-simulation-with-waning-immunity/" target="_blank" class="project-link">View Project<ion-icon name="arrow-forward-outline"></ion-icon></a></div></li>
+          <li class="project-card"><div class="project-card-content"><ion-icon name="cube-outline" class="project-icon"></ion-icon><h3 class="project-title">Volume Under Revolution</h3><p class="project-description">3D visualization of volumes generated by revolving curves</p><a href="https://abidhossainsadat.github.io/Volume-under-revolution/" target="_blank" class="project-link">View Project<ion-icon name="arrow-forward-outline"></ion-icon></a></div></li>
+          <li class="project-card"><div class="project-card-content"><ion-icon name="navigate-outline" class="project-icon"></ion-icon><h3 class="project-title">DQN Pathfinding & Neural Monitor</h3><p class="project-description">Interactive AI visualization using Deep Q-Networks. The network learns to navigate from start to goal while avoiding obstacles. Watch neural activations change as it learns!</p><a href="https://abidhossainsadat.github.io/DNN_Path_Finding/" target="_blank" class="project-link">View Project<ion-icon name="arrow-forward-outline"></ion-icon></a></div></li>
+        </ul></section>
 
-        <section id="publications">
-          <h2 class="article-title">Publications</h2>
-          <ol class="publication-list">
-            <li class="publication-item" onclick="togglePublication(this)">
-              <p>🢂 Hossain, A., Shamashuddin, M.D., Asogwa, K.K. and Ferdows, M. Heat transmission phenomenon in magnetic nanofluid flow across movable flat device with heat source impact: local non-similarity solution with 2nd-stage truncation. 
-              <i><a href="https://link.springer.com/article/10.1007/s10973-023-12751-8" target="_blank">Journal of Thermal Analysis and Calorimetry</a></i>, 149(4), pp.1581-1594.
-              <span class="citation">[8 citations]</span></p>
-              <div class="publication-details">
-                <p><strong>Conference:</strong> 2nd Annual JTAC conference 2023 Budapest, Hungary (Poster Presentation)</p>
-              </div>
-            </li>
-            <li class="publication-item" onclick="togglePublication(this)">
-              <p>🢂 Khaleque, T.S., Hossain, A., Shamshuddin, M.D., Ferdows, M., Salawu, S.O. and Sun, S. Soret and dufour impacts on radiative power-law fluid flow via continuously stretchable surface with varying viscosity and thermal conductivity. 
-              <i><a href="https://www.nature.com/articles/s41598-024-73426-4" target="_blank">Scientific Reports</a></i>, 14(1), p.23152. 
-              <span class="citation">[7 citations]</span></p>
-            </li>
-            <li class="publication-item" onclick="togglePublication(this)">
-              <p>🢂 Ferdows, M., Hossain, A., Uddin, M.J., Mim, F.T. and Sun, S. New similarity solutions of magnetohydrodynamic flow over horizontal plate by lie group with nonlinear hydrodynamic and linear thermal and mass slips. 
-              <i><a href="https://link.springer.com/article/10.1007/s44198-023-00145-1" target="_blank">Journal of Nonlinear Mathematical Physics</a></i>, 30(4), pp.1601-1620.
-              <span class="citation">[2 citation]</span></p>
-              <div class="publication-details">
-                <p><strong>Conference:</strong> AFMR-BMS Mathematical conference 2022 presentation</p>
-              </div>
-            </li>
-          </ol>
-        </section>
+        <section id="publications"><h2 class="article-title">Publications</h2><ol class="publication-list">
+          <li class="publication-item" onclick="togglePublication(this)"><p>🢂 Hossain, A., Shamashuddin, M.D., Asogwa, K.K. and Ferdows, M. Heat transmission phenomenon in magnetic nanofluid flow across movable flat device with heat source impact: local non-similarity solution with 2nd-stage truncation. <i><a href="https://link.springer.com/article/10.1007/s10973-023-12751-8" target="_blank">Journal of Thermal Analysis and Calorimetry</a></i>, 149(4), pp.1581-1594.<span class="citation">[8 citations]</span></p><div class="publication-details"><p><strong>Conference:</strong> 2nd Annual JTAC conference 2023 Budapest, Hungary (Poster Presentation)</p></div></li>
+          <li class="publication-item" onclick="togglePublication(this)"><p>🢂 Khaleque, T.S., Hossain, A., Shamshuddin, M.D., Ferdows, M., Salawu, S.O. and Sun, S. Soret and dufour impacts on radiative power-law fluid flow via continuously stretchable surface with varying viscosity and thermal conductivity. <i><a href="https://www.nature.com/articles/s41598-024-73426-4" target="_blank">Scientific Reports</a></i>, 14(1), p.23152.<span class="citation">[7 citations]</span></p></li>
+          <li class="publication-item" onclick="togglePublication(this)"><p>🢂 Ferdows, M., Hossain, A., Uddin, M.J., Mim, F.T. and Sun, S. New similarity solutions of magnetohydrodynamic flow over horizontal plate by lie group with nonlinear hydrodynamic and linear thermal and mass slips. <i><a href="https://link.springer.com/article/10.1007/s44198-023-00145-1" target="_blank">Journal of Nonlinear Mathematical Physics</a></i>, 30(4), pp.1601-1620.<span class="citation">[2 citation]</span></p><div class="publication-details"><p><strong>Conference:</strong> AFMR-BMS Mathematical conference 2022 presentation</p></div></li>
+        </ol></section>
 
-        <section id="education">
-          <h2 class="article-title">Education</h2>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="timeline-item-title">Masters</h4>
-              <span class="meta">University of Dhaka | 2024 - 2025</span>
-              <div class="timeline-text">
-                <ul>
-                  <li><b>GPA:</b> [Appearing]</li>
-                  <li><b>Achievements:</b> Recipient of the National Science and Technology Fellowship (NST Fellowship)</li>
-                  <li><b>Thesis Title:</b> Game-Theoretic Optimal Control of Vaccination and Behavioral Dynamics in an SIRV Epidemiological Framework</li>
-                </ul>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <h4 class="timeline-item-title">Bachelor of Science - BS, Applied Mathematics</h4>
-              <span class="meta">University of Dhaka | 2019 - 2023</span>
-              <div class="timeline-text">
-                <ul>
-                  <li><b>GPA:</b> 3.66 (out of 4.00)</li>
-                  <li><b>Achievements:</b> Obtained the University Bachelors Degree Government Scholarship</li>
-                  <li><b>Project Title:</b> Data Science : A Study of Mixture Models</li>
-                </ul>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <h4 class="timeline-item-title">HSC, Science</h4>
-              <span class="meta">Notre Dame College | 2016 - 2018</span>
-              <div class="timeline-text">
-                <ul>
-                  <li><b>GPA:</b> 5.00 (out of 5.00)</li>
-                  <li><b>Achievements:</b> Secured perfect attendance in every subject attended, NDC Math Olympiad Runners up</li>
-                </ul>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <h4 class="timeline-item-title">SSC, Science</h4>
-              <span class="meta">Milestone School and College | 2014 - 2016</span>
-              <div class="timeline-text">
-                <ul>
-                  <li><b>GPA:</b> 5.00 (out of 5.00)</li>
-                  <li><b>Achievements:</b> Secured 1st position out of 200 students in the English Version Curriculum</li>
-                </ul>
-              </div>
-            </li>
-          </ol>
-        </section>
+        <section id="education"><h2 class="article-title">Education</h2><ol class="timeline-list">
+          <li class="timeline-item"><h4 class="timeline-item-title">Masters</h4><span class="meta">University of Dhaka | 2024 - 2025</span><div class="timeline-text"><ul><li><b>GPA:</b> [Appearing]</li><li><b>Achievements:</b> Recipient of the National Science and Technology Fellowship (NST Fellowship)</li><li><b>Thesis Title:</b> Game-Theoretic Optimal Control of Vaccination and Behavioral Dynamics in an SIRV Epidemiological Framework</li></ul></div></li>
+          <li class="timeline-item"><h4 class="timeline-item-title">Bachelor of Science - BS, Applied Mathematics</h4><span class="meta">University of Dhaka | 2019 - 2023</span><div class="timeline-text"><ul><li><b>GPA:</b> 3.66 (out of 4.00)</li><li><b>Achievements:</b> Obtained the University Bachelors Degree Government Scholarship</li><li><b>Project Title:</b> Data Science : A Study of Mixture Models</li></ul></div></li>
+          <li class="timeline-item"><h4 class="timeline-item-title">HSC, Science</h4><span class="meta">Notre Dame College | 2016 - 2018</span><div class="timeline-text"><ul><li><b>GPA:</b> 5.00 (out of 5.00)</li><li><b>Achievements:</b> Secured perfect attendance in every subject attended, NDC Math Olympiad Runners up</li></ul></div></li>
+          <li class="timeline-item"><h4 class="timeline-item-title">SSC, Science</h4><span class="meta">Milestone School and College | 2014 - 2016</span><div class="timeline-text"><ul><li><b>GPA:</b> 5.00 (out of 5.00)</li><li><b>Achievements:</b> Secured 1st position out of 200 students in the English Version Curriculum</li></ul></div></li>
+        </ol></section>
 
-        <section class="contact-section" id="contact">
-          <div class="contact-form-container">
-            <h2 class="article-title">Get In Touch</h2>
-            <p class="contact-form-description">Have a question or want to collaborate? Feel free to reach out through the form below.</p>
-            
-            <div class="form-message" id="formMessage"></div>
-            
-            <form action="https://formspree.io/f/mnngzzra" method="POST" id="contactForm">
-              <label for="email">
-                Your Email
-                <input type="email" name="email" id="email" placeholder="youremail@example.com" required>
-              </label>
-              
-              <label for="message">
-                Your Message
-                <textarea name="message" id="message" placeholder="Write your message here..." required maxlength="1000"></textarea>
-              </label>
-              <div class="char-counter" id="charCounter">0 / 1000</div>
-              
-              <button type="submit" id="submitBtn">Send Message</button>
-            </form>
-          </div>
-        </section>
-
+        <section class="contact-section" id="contact"><div class="contact-form-container"><h2 class="article-title">Get In Touch</h2><p class="contact-form-description">Have a question or want to collaborate? Feel free to reach out through the form below.</p><div class="form-message" id="formMessage"></div><form action="https://formspree.io/f/mnngzzra" method="POST" id="contactForm"><label for="email">Your Email<input type="email" name="email" id="email" placeholder="youremail@example.com" required></label><label for="message">Your Message<textarea name="message" id="message" placeholder="Write your message here..." required maxlength="1000"></textarea></label><div class="char-counter" id="charCounter">0 / 1000</div><button type="submit" id="submitBtn">Send Message</button></form></div></section>
       </article>
     </div>
   </main>
 
   <script>
-    // ========== LOADING SCREEN ==========
-    window.addEventListener('load', function() {
-      setTimeout(() => {
-        document.getElementById('loading-screen').classList.add('hidden');
-        initAnimations();
-      }, 1500);
-    });
+    window.addEventListener('load', () => setTimeout(() => { document.getElementById('loading-screen').classList.add('hidden'); initAnimations(); }, 1500));
 
-    // ========== PARTICLE SYSTEM ==========
-    const canvas = document.getElementById('particle-canvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    let mouseX = 0;
-    let mouseY = 0;
+    // Particle system
+    const canvas = document.getElementById('particle-canvas'), ctx = canvas.getContext('2d');
+    let particles = [], mouseX = 0, mouseY = 0;
 
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
+    const resizeCanvas = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
     class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
-        this.color = `rgba(0, 229, 204, ${Math.random() * 0.5 + 0.2})`;
-      }
-
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        // Mouse interaction
-        const dx = mouseX - this.x;
-        const dy = mouseY - this.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 100) {
-          this.x -= dx * 0.01;
-          this.y -= dy * 0.01;
-        }
-
-        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-      }
-
-      draw() {
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
+      constructor() { this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height; this.size = Math.random() * 2 + 1; this.speedX = Math.random() * 0.5 - 0.25; this.speedY = Math.random() * 0.5 - 0.25; this.color = `rgba(0, 229, 204, ${Math.random() * 0.5 + 0.2})`; }
+      update() { this.x += this.speedX; this.y += this.speedY; const dx = mouseX - this.x, dy = mouseY - this.y, distance = Math.sqrt(dx * dx + dy * dy); if (distance < 100) { this.x -= dx * 0.01; this.y -= dy * 0.01; } if (this.x < 0 || this.x > canvas.width) this.speedX *= -1; if (this.y < 0 || this.y > canvas.height) this.speedY *= -1; }
+      draw() { ctx.fillStyle = this.color; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill(); }
     }
 
-    function initParticles() {
-      particles = [];
-      const particleCount = Math.min(100, Math.floor(canvas.width * canvas.height / 15000));
-      for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-      }
-    }
+    const initParticles = () => { particles = []; const count = Math.min(100, Math.floor(canvas.width * canvas.height / 15000)); for (let i = 0; i < count; i++) particles.push(new Particle()); };
+    const connectParticles = () => { for (let i = 0; i < particles.length; i++) for (let j = i + 1; j < particles.length; j++) { const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y, distance = Math.sqrt(dx * dx + dy * dy); if (distance < 120) { ctx.strokeStyle = `rgba(0, 229, 204, ${0.15 * (1 - distance / 120)})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke(); } } };
+    const animateParticles = () => { ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach(p => { p.update(); p.draw(); }); connectParticles(); requestAnimationFrame(animateParticles); };
 
-    function connectParticles() {
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+    initParticles(); animateParticles();
+    document.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; });
 
-          if (distance < 120) {
-            ctx.strokeStyle = `rgba(0, 229, 204, ${0.15 * (1 - distance / 120)})`;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-    }
+    // Typing animation
+    const typeWriter = (el, text, speed, cb) => { let i = 0; el.innerHTML = ''; const type = () => { if (i < text.length) { el.innerHTML += text.charAt(i++); setTimeout(type, speed); } else cb && cb(); }; type(); };
 
-    function animateParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-      });
-      connectParticles();
-      requestAnimationFrame(animateParticles);
-    }
-
-    initParticles();
-    animateParticles();
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-
-    // ========== TYPING ANIMATION ==========
-    function typeWriter(element, text, speed, callback) {
-      let i = 0;
-      element.innerHTML = '';
-      
-      function type() {
-        if (i < text.length) {
-          element.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(type, speed);
-        } else if (callback) {
-          callback();
-        }
-      }
-      type();
-    }
-
-    function initAnimations() {
-      const nameElement = document.getElementById('typed-name');
-      const descElement = document.getElementById('typed-description');
-      
-      typeWriter(nameElement, 'Abid Hossain', 100, () => {
-        nameElement.innerHTML += '<span class="typing-cursor"></span>';
-        setTimeout(() => {
-          typeWriter(descElement, 'Computational Researcher & Applied Mathematician specializing in CFD, Machine Learning, and Evolutionary Game Theory.', 30);
-        }, 300);
-      });
-
-      // Animate stat counters
+    const initAnimations = () => {
+      const name = document.getElementById('typed-name'), desc = document.getElementById('typed-description');
+      typeWriter(name, 'Abid Hossain', 100, () => { name.innerHTML += '<span class="typing-cursor"></span>'; setTimeout(() => typeWriter(desc, 'Computational Researcher & Applied Mathematician specializing in CFD, Machine Learning, and Evolutionary Game Theory.', 30), 300); });
       animateCounters();
-      
-      // Trigger scroll animations
       observeSections();
-    }
+    };
 
-    // ========== COUNTER ANIMATION ==========
-    function animateCounters() {
-      const counters = document.querySelectorAll('.stat-number');
-      
-      counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        const duration = 2000;
-        const step = target / (duration / 16);
-        let current = 0;
-        
-        const updateCounter = () => {
-          current += step;
-          if (current < target) {
-            counter.textContent = Math.floor(current);
-            requestAnimationFrame(updateCounter);
-          } else {
-            counter.textContent = target;
-          }
-        };
-        
-        setTimeout(updateCounter, 500);
-      });
-    }
+    // Counter animation
+    const animateCounters = () => { document.querySelectorAll('.stat-number').forEach(c => { const target = parseInt(c.getAttribute('data-target')), step = target / 125; let current = 0; const update = () => { if ((current += step) < target) { c.textContent = Math.floor(current); requestAnimationFrame(update); } else c.textContent = target; }; setTimeout(update, 500); }); };
 
-    // ========== SCROLL ANIMATIONS ==========
-    function observeSections() {
-      const sections = document.querySelectorAll('article > section');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-          }
-        });
-      }, { threshold: 0.1 });
-      
-      sections.forEach(section => observer.observe(section));
-    }
+    // Scroll animations
+    const observeSections = () => { const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate'); }), { threshold: 0.1 }); document.querySelectorAll('article > section').forEach(s => observer.observe(s)); };
 
-    // ========== NAVIGATION ==========
-    function scrollToSection(sectionId) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
+    // Navigation
+    const scrollToSection = (id) => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
 
-    // Active section highlighting
-    const mainContent = document.getElementById('mainContent');
-    const sections = document.querySelectorAll('section[id]');
-    const navNodes = document.querySelectorAll('.timeline-node');
-
+    const mainContent = document.getElementById('mainContent'), sections = document.querySelectorAll('section[id]'), navNodes = document.querySelectorAll('.timeline-node');
     mainContent.addEventListener('scroll', () => {
       let current = '';
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (mainContent.scrollTop >= sectionTop - 200) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navNodes.forEach(node => {
-        const iconBox = node.querySelector('.icon-box');
-        iconBox.classList.remove('active');
-        if (node.getAttribute('data-section') === current) {
-          iconBox.classList.add('active');
-        }
-      });
-
-      // Update reading progress
-      const scrollTop = mainContent.scrollTop;
-      const scrollHeight = mainContent.scrollHeight - mainContent.clientHeight;
-      const progress = (scrollTop / scrollHeight) * 100;
-      document.getElementById('reading-progress').style.width = progress + '%';
+      sections.forEach(s => { if (mainContent.scrollTop >= s.offsetTop - 200) current = s.getAttribute('id'); });
+      navNodes.forEach(n => { const box = n.querySelector('.icon-box'); box.classList.remove('active'); if (n.getAttribute('data-section') === current) box.classList.add('active'); });
+      document.getElementById('reading-progress').style.width = (mainContent.scrollTop / (mainContent.scrollHeight - mainContent.clientHeight)) * 100 + '%';
     });
 
-    // ========== TIMELINE EXPAND/COLLAPSE ==========
-    document.querySelectorAll('.timeline-item').forEach(item => {
-      item.addEventListener('click', function(e) {
-        if (!e.target.closest('a')) {
-          this.classList.toggle('collapsed');
-        }
-      });
-    });
+    // Timeline and publication toggles
+    document.querySelectorAll('.timeline-item').forEach(i => i.addEventListener('click', function(e) { if (!e.target.closest('a')) this.classList.toggle('collapsed'); }));
+    const togglePublication = (e) => { e.classList.toggle('expanded'); };
 
-    // ========== PUBLICATION TOGGLE ==========
-    function togglePublication(element) {
-      element.classList.toggle('expanded');
-    }
+    // Form handling
+    const form = document.getElementById('contactForm'), email = document.getElementById('email'), msg = document.getElementById('message'), formMsg = document.getElementById('formMessage'), submit = document.getElementById('submitBtn'), counter = document.getElementById('charCounter');
+    
+    msg.addEventListener('input', () => { const len = msg.value.length; counter.textContent = `${len} / 1000`; counter.style.color = len > 900 ? '#ff4444' : 'var(--text-tertiary)'; });
+    
+    const validateEmail = (e) => { const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; if (!regex.test(e.value)) e.classList.add('error'); else e.classList.remove('error'); };
+    email.addEventListener('blur', () => validateEmail(email));
+    email.addEventListener('focus', () => email.classList.remove('error'));
 
-    // ========== FORM HANDLING ==========
-    const form = document.getElementById('contactForm');
-    const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
-    const formMessage = document.getElementById('formMessage');
-    const submitBtn = document.getElementById('submitBtn');
-    const charCounter = document.getElementById('charCounter');
-
-    // Character counter
-    messageInput.addEventListener('input', () => {
-      const length = messageInput.value.length;
-      charCounter.textContent = `${length} / 1000`;
-      if (length > 900) {
-        charCounter.style.color = '#ff4444';
-      } else {
-        charCounter.style.color = 'var(--text-tertiary)';
-      }
-    });
-
-    // Real-time email validation
-    emailInput.addEventListener('blur', () => {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(emailInput.value)) {
-        emailInput.classList.add('error');
-      } else {
-        emailInput.classList.remove('error');
-      }
-    });
-
-    emailInput.addEventListener('focus', () => {
-      emailInput.classList.remove('error');
-    });
-
-    // Form submission
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!regex.test(email.value)) { email.classList.add('error'); return; }
+      if (msg.value.trim().length < 10) return;
       
-      // Validate
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(emailInput.value)) {
-        showMessage('Please enter a valid email address.', 'error');
-        emailInput.classList.add('error');
-        return;
-      }
-      
-      if (messageInput.value.trim().length < 10) {
-        showMessage('Message must be at least 10 characters long.', 'error');
-        messageInput.classList.add('error');
-        return;
-      }
-
-      // Show loading state
-      submitBtn.textContent = 'Sending...';
-      submitBtn.disabled = true;
-
-      // Submit form
-      const formData = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => {
-        if (response.ok) {
-          showMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
-          form.reset();
-          charCounter.textContent = '0 / 1000';
-        } else {
-          throw new Error('Form submission failed');
-        }
-      })
-      .catch(error => {
-        showMessage('Oops! There was a problem sending your message. Please try again.', 'error');
-      })
-      .finally(() => {
-        submitBtn.textContent = 'Send Message';
-        submitBtn.disabled = false;
-      });
+      submit.textContent = 'Sending...'; submit.disabled = true;
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+        .then(r => { if (r.ok) { formMsg.textContent = 'Message sent successfully!'; formMsg.className = 'form-message success'; formMsg.style.display = 'block'; form.reset(); counter.textContent = '0 / 1000'; setTimeout(() => formMsg.style.display = 'none', 5000); } else throw new Error(); })
+        .catch(() => { formMsg.textContent = 'Error sending message'; formMsg.className = 'form-message error'; formMsg.style.display = 'block'; setTimeout(() => formMsg.style.display = 'none', 5000); })
+        .finally(() => { submit.textContent = 'Send Message'; submit.disabled = false; });
     });
-
-    function showMessage(text, type) {
-      formMessage.textContent = text;
-      formMessage.className = `form-message ${type}`;
-      formMessage.style.display = 'block';
-      
-      setTimeout(() => {
-        formMessage.style.display = 'none';
-      }, 5000);
-    }
   </script>
 </body>
 </html>
-
-
-
