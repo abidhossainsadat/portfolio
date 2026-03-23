@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +33,7 @@
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; font-size: 16px; }
-
     body {
       font-family: var(--sans);
       background: var(--warm-white);
@@ -64,14 +61,12 @@
       scrollbar-width: none;
     }
     .sidebar::-webkit-scrollbar { display: none; }
-
     .sidebar-inner {
       padding: 3rem 2rem;
       display: flex;
       flex-direction: column;
       min-height: 100%;
     }
-
     .profile-photo-wrap {
       width: 110px;
       height: 110px;
@@ -87,7 +82,6 @@
       object-fit: cover;
       display: block;
     }
-
     .sidebar-name {
       font-family: var(--serif);
       font-size: 1.6rem;
@@ -97,7 +91,6 @@
       letter-spacing: 0.01em;
       margin-bottom: 0.4rem;
     }
-
     .sidebar-title {
       font-size: 0.78rem;
       font-weight: 500;
@@ -106,14 +99,12 @@
       color: var(--gold-light);
       margin-bottom: 2rem;
     }
-
     .sidebar-divider {
       width: 40px;
       height: 2px;
       background: var(--gold);
       margin-bottom: 2rem;
     }
-
     .sidebar-section-label {
       font-size: 0.68rem;
       font-weight: 600;
@@ -122,7 +113,6 @@
       color: var(--gold);
       margin-bottom: 0.75rem;
     }
-
     .sidebar-contact-list {
       list-style: none;
       margin-bottom: 2rem;
@@ -148,7 +138,6 @@
       transition: color 0.2s;
     }
     .sidebar-contact-list a:hover { color: var(--gold-light); }
-
     .sidebar-nav {
       list-style: none;
       margin-bottom: 2rem;
@@ -183,7 +172,6 @@
     }
     .sidebar-nav a:hover .nav-dot,
     .sidebar-nav a.active .nav-dot { opacity: 1; }
-
     .sidebar-stats {
       margin-top: auto;
       padding-top: 2rem;
@@ -211,10 +199,7 @@
     }
 
     /* ── MAIN ── */
-    .main {
-      background: var(--warm-white);
-      padding: 0;
-    }
+    .main { background: var(--warm-white); padding: 0; }
 
     /* ── HERO ── */
     .hero {
@@ -227,10 +212,8 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: -80px;
-      right: -80px;
-      width: 360px;
-      height: 360px;
+      top: -80px; right: -80px;
+      width: 360px; height: 360px;
       border-radius: 50%;
       border: 60px solid rgba(184,150,62,0.07);
       pointer-events: none;
@@ -238,15 +221,12 @@
     .hero::after {
       content: '';
       position: absolute;
-      bottom: -40px;
-      right: 200px;
-      width: 200px;
-      height: 200px;
+      bottom: -40px; right: 200px;
+      width: 200px; height: 200px;
       border-radius: 50%;
       border: 30px solid rgba(184,150,62,0.05);
       pointer-events: none;
     }
-
     .hero-eyebrow {
       font-size: 0.75rem;
       font-weight: 600;
@@ -261,11 +241,9 @@
     .hero-eyebrow::before {
       content: '';
       display: inline-block;
-      width: 32px;
-      height: 2px;
+      width: 32px; height: 2px;
       background: var(--gold);
     }
-
     .hero-name {
       font-family: var(--serif);
       font-size: 4.2rem;
@@ -275,16 +253,14 @@
       letter-spacing: -0.02em;
       margin-bottom: 1.5rem;
     }
-
     .hero-tagline {
       font-size: 1.05rem;
       color: var(--text-mid);
-      max-width: 560px;
+      max-width: 600px;
       line-height: 1.75;
       font-weight: 400;
       margin-bottom: 2rem;
     }
-
     .hero-badges {
       display: flex;
       flex-wrap: wrap;
@@ -305,8 +281,7 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
     .badge-dot {
-      width: 6px;
-      height: 6px;
+      width: 6px; height: 6px;
       border-radius: 50%;
       background: var(--gold);
     }
@@ -319,12 +294,8 @@
       transform: translateY(20px);
       transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
     }
-    .content-section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .content-section.visible { opacity: 1; transform: translateY(0); }
     .content-section:last-child { border-bottom: none; }
-
     .section-header {
       display: flex;
       align-items: baseline;
@@ -339,11 +310,7 @@
       color: var(--gold);
       white-space: nowrap;
     }
-    .section-rule {
-      flex: 1;
-      height: 1px;
-      background: var(--rule);
-    }
+    .section-rule { flex: 1; height: 1px; background: var(--rule); }
     .section-title {
       font-family: var(--serif);
       font-size: 2.2rem;
@@ -388,8 +355,7 @@
     }
     .skill-item:hover { background: var(--cream); }
     .skill-marker {
-      width: 3px;
-      height: 28px;
+      width: 3px; height: 28px;
       background: var(--gold);
       border-radius: 2px;
       flex-shrink: 0;
@@ -420,7 +386,6 @@
       border-bottom: 1px solid var(--rule);
     }
     .exp-item:last-child { border-bottom: none; padding-bottom: 0; }
-    .exp-meta { }
     .exp-period {
       font-family: var(--mono);
       font-size: 0.75rem;
@@ -429,12 +394,7 @@
       letter-spacing: 0.03em;
       margin-bottom: 0.4rem;
     }
-    .exp-org {
-      font-size: 0.82rem;
-      color: var(--text-mute);
-      line-height: 1.4;
-    }
-    .exp-body { }
+    .exp-org { font-size: 0.82rem; color: var(--text-mute); line-height: 1.4; }
     .exp-role {
       font-family: var(--serif);
       font-size: 1.35rem;
@@ -443,10 +403,7 @@
       margin-bottom: 0.75rem;
       letter-spacing: -0.01em;
     }
-    .exp-bullets {
-      list-style: none;
-      padding: 0;
-    }
+    .exp-bullets { list-style: none; padding: 0; }
     .exp-bullets li {
       font-size: 0.92rem;
       color: var(--text-mid);
@@ -483,10 +440,8 @@
     .project-card::after {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 3px;
-      width: 0;
+      bottom: 0; left: 0;
+      height: 3px; width: 0;
       background: linear-gradient(90deg, var(--gold), var(--gold-light));
       transition: width 0.3s var(--ease);
     }
@@ -511,11 +466,7 @@
       margin-bottom: 0.6rem;
       letter-spacing: -0.01em;
     }
-    .project-desc {
-      font-size: 0.85rem;
-      color: var(--text-mid);
-      line-height: 1.6;
-    }
+    .project-desc { font-size: 0.85rem; color: var(--text-mid); line-height: 1.6; }
     .project-cta {
       display: flex;
       align-items: center;
@@ -528,12 +479,21 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
-    .project-cta svg {
-      transition: transform 0.2s;
-    }
+    .project-cta svg { transition: transform 0.2s; }
     .project-card:hover .project-cta svg { transform: translateX(4px); }
 
     /* PUBLICATIONS */
+    .pub-subsection-title {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+    .pub-subsection-title:first-of-type { margin-top: 0; }
     .pub-list { list-style: none; }
     .pub-item {
       padding: 2rem 0;
@@ -553,7 +513,6 @@
       padding-top: 4px;
       text-align: right;
     }
-    .pub-content { }
     .pub-title {
       font-family: var(--serif);
       font-size: 1.1rem;
@@ -605,11 +564,31 @@
       padding: 0.3rem 0.75rem;
       border-radius: 4px;
     }
-    .pub-conference {
-      font-size: 0.78rem;
-      color: var(--text-mute);
-      font-style: italic;
+    .pub-badge-preprint {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(100,100,200,0.08);
+      border: 1px solid rgba(100,100,200,0.2);
+      color: #5560a0;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.3rem 0.75rem;
+      border-radius: 4px;
     }
+    .pub-badge-funded {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(50,140,80,0.08);
+      border: 1px solid rgba(50,140,80,0.2);
+      color: #2d7a4a;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.3rem 0.75rem;
+      border-radius: 4px;
+    }
+    .pub-conference { font-size: 0.78rem; color: var(--text-mute); font-style: italic; }
 
     /* EDUCATION */
     .edu-list { list-style: none; }
@@ -629,7 +608,6 @@
       letter-spacing: 0.03em;
       padding-top: 4px;
     }
-    .edu-body { }
     .edu-degree {
       font-family: var(--serif);
       font-size: 1.25rem;
@@ -643,19 +621,9 @@
       font-weight: 500;
       margin-bottom: 0.75rem;
     }
-    .edu-detail {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem 1.5rem;
-    }
-    .edu-detail-item {
-      font-size: 0.83rem;
-      color: var(--text-mute);
-    }
-    .edu-detail-item strong {
-      color: var(--text-dark);
-      font-weight: 600;
-    }
+    .edu-detail { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; }
+    .edu-detail-item { font-size: 0.83rem; color: var(--text-mute); }
+    .edu-detail-item strong { color: var(--text-dark); font-weight: 600; }
     .edu-note {
       margin-top: 0.5rem;
       font-size: 0.82rem;
@@ -666,6 +634,44 @@
       border-radius: 0 4px 4px 0;
       display: inline-block;
     }
+
+    /* CERTIFICATIONS */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .cert-card {
+      background: white;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .cert-card:hover { background: var(--cream); border-color: rgba(184,150,62,0.35); }
+    .cert-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--highlight);
+      border: 1px solid rgba(184,150,62,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+    .cert-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+    }
+    .cert-issuer { font-size: 0.78rem; color: var(--text-mute); }
 
     /* CONTACT */
     .contact-wrap {
@@ -680,10 +686,7 @@
       line-height: 1.8;
       max-width: 380px;
     }
-    .contact-links {
-      list-style: none;
-      margin-top: 2rem;
-    }
+    .contact-links { list-style: none; margin-top: 2rem; }
     .contact-links li {
       display: flex;
       align-items: center;
@@ -709,8 +712,6 @@
       transition: color 0.2s;
     }
     .contact-links a:hover { color: var(--navy); }
-
-    .contact-form-side { }
     .form-group { margin-bottom: 1.25rem; }
     .form-label {
       display: block;
@@ -721,8 +722,7 @@
       color: var(--text-mute);
       margin-bottom: 0.5rem;
     }
-    .form-input,
-    .form-textarea {
+    .form-input, .form-textarea {
       width: 100%;
       padding: 0.85rem 1rem;
       border: 1px solid var(--rule);
@@ -734,8 +734,7 @@
       transition: border-color 0.2s, box-shadow 0.2s;
       outline: none;
     }
-    .form-input:focus,
-    .form-textarea:focus {
+    .form-input:focus, .form-textarea:focus {
       border-color: var(--gold);
       box-shadow: 0 0 0 3px rgba(184,150,62,0.12);
     }
@@ -785,8 +784,7 @@
     /* ── PROGRESS BAR ── */
     #progress-bar {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       height: 2px;
       background: var(--gold);
       width: 0%;
@@ -802,26 +800,12 @@
     }
     @media (max-width: 860px) {
       .layout { grid-template-columns: 1fr; }
-      .sidebar {
-        position: static;
-        height: auto;
-        flex-direction: row;
-        overflow-x: auto;
-      }
-      .sidebar-inner {
-        flex-direction: row;
-        align-items: center;
-        padding: 1.25rem 2rem;
-        gap: 2rem;
-        min-height: auto;
-        min-width: max-content;
-      }
+      .sidebar { position: static; height: auto; flex-direction: row; overflow-x: auto; }
+      .sidebar-inner { flex-direction: row; align-items: center; padding: 1.25rem 2rem; gap: 2rem; min-height: auto; min-width: max-content; }
       .profile-photo-wrap { width: 52px; height: 52px; margin-bottom: 0; }
       .sidebar-name { font-size: 1.1rem; margin-bottom: 0; }
-      .sidebar-title, .sidebar-divider, .sidebar-section-label,
-      .sidebar-contact-list, .sidebar-stats { display: none; }
-      .sidebar-nav { margin-bottom: 0; }
-      .sidebar-nav { display: flex; gap: 0.25rem; }
+      .sidebar-title, .sidebar-divider, .sidebar-section-label, .sidebar-contact-list, .sidebar-stats { display: none; }
+      .sidebar-nav { margin-bottom: 0; display: flex; gap: 0.25rem; }
       .sidebar-nav li + li { margin-top: 0; }
       .hero { padding: 2.5rem 2rem; }
       .content-section { padding: 2.5rem 2rem; }
@@ -832,7 +816,7 @@
     @media (max-width: 540px) {
       .hero-name { font-size: 2.2rem; }
       .section-title { font-size: 1.8rem; }
-      .skills-grid { grid-template-columns: 1fr; }
+      .skills-grid, .cert-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
       .pub-item { grid-template-columns: 36px 1fr; }
     }
@@ -855,14 +839,11 @@
         <div class="profile-photo-wrap">
           <img src="https://media.licdn.com/dms/image/v2/D5603AQGa6WetqkqO7A/profile-displayphoto-scale_400_400/B56Zt5HK6WJoAg-/0/1767263483439?e=1775088000&v=beta&t=MBfeJjkYX9E7PAlStdQXd1eu-Cfjgx8gsaOMPTWO01k" alt="Abid Hossain">
         </div>
-
         <div>
           <div class="sidebar-name">Abid Hossain</div>
-          <div class="sidebar-title">Computational Researcher</div>
+          <div class="sidebar-title">Lecturer · Computational Researcher</div>
         </div>
-
         <div class="sidebar-divider"></div>
-
         <div class="sidebar-section-label">Navigation</div>
         <ul class="sidebar-nav" id="sideNav">
           <li><a href="#profile" data-section="profile"><span class="nav-dot"></span>Profile</a></li>
@@ -871,14 +852,18 @@
           <li><a href="#projects" data-section="projects"><span class="nav-dot"></span>Projects</a></li>
           <li><a href="#publications" data-section="publications"><span class="nav-dot"></span>Publications</a></li>
           <li><a href="#education" data-section="education"><span class="nav-dot"></span>Education</a></li>
+          <li><a href="#certifications" data-section="certifications"><span class="nav-dot"></span>Certifications</a></li>
           <li><a href="#contact" data-section="contact"><span class="nav-dot"></span>Contact</a></li>
         </ul>
-
         <div class="sidebar-section-label">Contact</div>
         <ul class="sidebar-contact-list">
           <li>
             <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-            <a href="mailto:abid28266@gmail.com">abid28266@gmail.com</a>
+            <a href="mailto:abid.hossainsadat@gmail.com">abid.hossainsadat@gmail.com</a>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            +880-1760-028266
           </li>
           <li>
             <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
@@ -897,13 +882,12 @@
             <a href="https://scholar.google.com/citations?user=ayPQ5jEAAAAJ" target="_blank">Google Scholar</a>
           </li>
         </ul>
-
         <div class="sidebar-stats">
           <div class="sidebar-section-label">At a Glance</div>
           <div class="stat-row">
-            <div class="stat-block"><div class="stat-num">3</div><div class="stat-lbl">Papers</div></div>
+            <div class="stat-block"><div class="stat-num">4+</div><div class="stat-lbl">Papers</div></div>
             <div class="stat-block"><div class="stat-num">25</div><div class="stat-lbl">Citations</div></div>
-            <div class="stat-block"><div class="stat-num">3+</div><div class="stat-lbl">Yrs Exp.</div></div>
+            <div class="stat-block"><div class="stat-num">4+</div><div class="stat-lbl">Yrs Exp.</div></div>
           </div>
         </div>
       </div>
@@ -914,16 +898,17 @@
 
       <!-- HERO -->
       <section class="hero">
-        <div class="hero-eyebrow">University of Dhaka — Applied Mathematics</div>
+        <div class="hero-eyebrow">Daffodil International University · University of Dhaka</div>
         <h1 class="hero-name">Abid Hossain</h1>
-        <p class="hero-tagline">Computational researcher specialising in fluid dynamics, mathematical epidemiology, and evolutionary game theory. NST Fellow. Published in <em>Scientific Reports</em> and <em>Journal of Thermal Analysis and Calorimetry</em>.</p>
+        <p class="hero-tagline">Lecturer and computational researcher specialising in fluid dynamics, mathematical epidemiology, and evolutionary game theory. NST Fellow. Published in <em>Scientific Reports</em>, <em>Journal of Thermal Analysis and Calorimetry</em>, and <em>Journal of Nonlinear Mathematical Physics</em>. IJSO medal coach.</p>
         <div class="hero-badges">
           <span class="badge"><span class="badge-dot"></span>Computational Fluid Dynamics</span>
           <span class="badge"><span class="badge-dot"></span>Epidemic Modelling</span>
           <span class="badge"><span class="badge-dot"></span>Game Theory</span>
           <span class="badge"><span class="badge-dot"></span>Machine Learning</span>
           <span class="badge"><span class="badge-dot"></span>Optimal Control</span>
-          <span class="badge"><span class="badge-dot"></span>Journal Reviewer — Elsevier & Nature</span>
+          <span class="badge"><span class="badge-dot"></span>Teaching &amp; Mentorship</span>
+          <span class="badge"><span class="badge-dot"></span>Journal Reviewer — Elsevier &amp; Nature</span>
         </div>
       </section>
 
@@ -934,9 +919,9 @@
           <div class="section-rule"></div>
         </div>
         <h2 class="section-title">Profile</h2>
-        <p class="profile-text">Abid Hossain is a dedicated researcher whose work spans computational fluid dynamics, applied simulations, and mathematical epidemiology. With expertise in multistrain epidemic modelling, nanofluidics, heat transfer, and simulation from data, he has contributed to high-impact projects including a UGC-funded game dynamic model for COVID-19 policy recommendations.</p>
-        <p class="profile-text">His research has been published in <em>Scientific Reports</em>, <em>Journal of Thermal Analysis and Calorimetry</em>, and the <em>Journal of Nonlinear Mathematical Physics</em>, and presented at international conferences including JTACC (Budapest) and ICMMPE. He serves as a certified peer reviewer for Springer and Elsevier, and founded the Applied Mathematics Programming Society to bridge academia and industry through numerical methods and data visualisation.</p>
-        <p class="profile-text">Currently pursuing his Master's at the University of Dhaka as an NST Fellow, Abid balances deep technical expertise with leadership, mentorship, and a commitment to academic excellence.</p>
+        <p class="profile-text">Abid Hossain is an applied mathematician and educator whose work spans computational fluid dynamics, mathematical epidemiology, and evolutionary game theory. Currently a Lecturer in Software Engineering at Daffodil International University and an NST Fellow at the University of Dhaka, he develops models that inform real-world policy — from vaccination strategy optimisation to nanofluid heat-transfer simulations published in Elsevier and Springer journals.</p>
+        <p class="profile-text">His research has appeared in <em>Scientific Reports</em>, the <em>Journal of Thermal Analysis and Calorimetry</em>, and the <em>Journal of Nonlinear Mathematical Physics</em>, and has been presented at international conferences including JTAC (Budapest), ICMMPE, and the 9th BSME ICTE. He serves as a certified peer reviewer for Springer and Elsevier, and founded both the Applied Mathematics Programming Society and <em>Eduvanta</em> — a platform bridging mathematical theory with AI/ML applications, with 110+ workshop participants to date.</p>
+        <p class="profile-text">Beyond research, Abid coached Bangladesh's IJSO team, with all six students earning Bronze Medals at the 22nd IJSO in Russia (2025), and has guided 21+ students into university programmes. He balances deep technical expertise with leadership, mentorship, and a commitment to widening access to science education.</p>
       </section>
 
       <!-- SKILLS -->
@@ -948,14 +933,16 @@
         <h2 class="section-title">Expertise</h2>
         <div class="skills-grid">
           <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Computational Fluid Dynamics</span><span class="skill-tag">Core</span></div>
+          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Mathematical Epidemiology</span><span class="skill-tag">Core</span></div>
+          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Game Theory &amp; Optimal Control</span><span class="skill-tag">Core</span></div>
+          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Nanofluidics &amp; Heat Transfer</span><span class="skill-tag">Core</span></div>
           <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Machine Learning</span><span class="skill-tag">Applied</span></div>
           <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Deep Learning</span><span class="skill-tag">Applied</span></div>
-          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Mathematical Epidemiology</span><span class="skill-tag">Core</span></div>
-          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Game Theory</span><span class="skill-tag">Core</span></div>
-          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Optimal Control</span><span class="skill-tag">Core</span></div>
-          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Data Analysis & Visualisation</span><span class="skill-tag">Applied</span></div>
+          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Data Analysis &amp; Visualisation</span><span class="skill-tag">Applied</span></div>
+          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Dissipative Particle Dynamics</span><span class="skill-tag">Applied</span></div>
           <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Peer Review (Elsevier, Nature)</span><span class="skill-tag">Expert</span></div>
-          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Python · MATLAB · Mathematica</span><span class="skill-tag">Tools</span></div>
+          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Teaching &amp; Mentorship</span><span class="skill-tag">Expert</span></div>
+          <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Python · MATLAB · Mathematica · C++</span><span class="skill-tag">Tools</span></div>
           <div class="skill-item"><div class="skill-marker"></div><span class="skill-name">Scientific Communication</span><span class="skill-tag">Expert</span></div>
         </div>
       </section>
@@ -968,71 +955,119 @@
         </div>
         <h2 class="section-title">Experience</h2>
         <ol class="exp-list">
+
+          <li class="exp-item">
+            <div class="exp-meta">
+              <div class="exp-period">Jan 2026 — Present</div>
+              <div class="exp-org">Daffodil International University, Birulia, Dhaka</div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-role">Lecturer — Dept. of Software Engineering</div>
+              <ul class="exp-bullets">
+                <li>Delivering undergraduate course MAT 101: Calculus and Geometry, emphasising analytical thinking and mathematical foundations relevant to software engineering and algorithm design.</li>
+                <li>Continued development of the Multistrain Game Dynamic Epidemic Model alongside teaching responsibilities.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="exp-item">
+            <div class="exp-meta">
+              <div class="exp-period">Aug 2025 — Present</div>
+              <div class="exp-org">Society for the Popularisation of Science, Bangladesh (SPSB)</div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-role">Volunteer — Academic Team Member</div>
+              <ul class="exp-bullets">
+                <li>Organised and delivered Physics and Chemistry training for the Bangladesh Junior Science Olympiad (BdJSO) team; selected 6 qualifiers via the CST TST programme out of 17,000 students, with hands-on sessions at MASLAB.</li>
+                <li>Coached Bangladesh's International Junior Science Olympiad (IJSO) team; all 6 students secured Bronze Medals at the 22nd IJSO in Russia (Nov–Dec 2025).</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="exp-item">
+            <div class="exp-meta">
+              <div class="exp-period">Apr 2025 — Present</div>
+              <div class="exp-org">Eduvanta, Dhaka</div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-role">Founder</div>
+              <ul class="exp-bullets">
+                <li>Founded Eduvanta (100+ LinkedIn followers), a platform delivering structured content in Applied Mathematics, AI/ML, and Data Science; 5 booklets authored to date.</li>
+                <li>Delivered 2 workshops to 110+ participants covering mathematical foundations of DNNs, ML, and AI — enabling participants to independently design and implement AI models.</li>
+              </ul>
+            </div>
+          </li>
+
           <li class="exp-item">
             <div class="exp-meta">
               <div class="exp-period">Jul 2024 — Present</div>
-              <div class="exp-org">Muntasir's Lab on Evolutionary Game Theory</div>
+              <div class="exp-org">Muntasir's Lab on Evolutionary Game Theory, University of Dhaka</div>
             </div>
             <div class="exp-body">
               <div class="exp-role">Research Assistant</div>
               <ul class="exp-bullets">
-                <li>Authored 2 research articles (1 under review) on optimal control in epidemic game-theoretic models.</li>
-                <li>Developed a Multistrain Game Dynamic Epidemic Model calibrated to COVID-19 data, influencing policy recommendations.</li>
+                <li>Authored 2 research articles (1 under review) on optimal control strategies in epidemic game-theoretic models.</li>
+                <li>Developed a Multistrain Game Dynamic Epidemic Model calibrated to COVID-19 data under a UGC-funded project (8.26 lac BDT ≈ USD 7,500), influencing public health policy recommendations.</li>
               </ul>
             </div>
           </li>
-          <li class="exp-item">
-            <div class="exp-meta">
-              <div class="exp-period">Mar 2022 — Jun 2024</div>
-              <div class="exp-org">Fluid Flow Modelling & Simulation Group</div>
-            </div>
-            <div class="exp-body">
-              <div class="exp-role">Researcher</div>
-              <ul class="exp-bullets">
-                <li>Published 3 articles (2 under review) in high-impact journals, accruing 22+ citations.</li>
-                <li>Conducted research in fluid dynamics, nanofluidics, heat transfer, and microfluidics.</li>
-              </ul>
-            </div>
-          </li>
-          <li class="exp-item">
-            <div class="exp-meta">
-              <div class="exp-period">Oct 2023 — Dec 2024</div>
-              <div class="exp-org">Society for Industrial and Applied Mathematics (SIAM)</div>
-            </div>
-            <div class="exp-body">
-              <div class="exp-role">Computational Simulation Engineer</div>
-              <ul class="exp-bullets">
-                <li>Developed advanced simulation models for traffic flow modelling.</li>
-                <li>Improved computational processes in gas molecule dynamics, traffic control, and heat transfer.</li>
-              </ul>
-            </div>
-          </li>
+
           <li class="exp-item">
             <div class="exp-meta">
               <div class="exp-period">Dec 2023 — Present</div>
-              <div class="exp-org">Elsevier & Nature (Volunteer)</div>
+              <div class="exp-org">Elsevier &amp; Nature (Volunteer) — Remote</div>
             </div>
             <div class="exp-body">
               <div class="exp-role">Journal Reviewer</div>
               <ul class="exp-bullets">
-                <li>Reviewed advanced research in CFD, heat transfer, and nanofluidics for <em>Journal of Fluid and Structures</em>, <em>International Journal of Heat and Fluid Flow</em>, <em>Journal of Thermal Analysis and Calorimetry</em>, and <em>Scientific Reports</em>.</li>
-                <li>Ensured publication quality by providing rigorous, constructive manuscript assessments.</li>
+                <li>Reviewed manuscripts in CFD, heat transfer, and nanofluidics for <em>Journal of Fluid and Structures</em>, <em>International Journal of Heat and Fluid Flow</em>, <em>Journal of Thermal Analysis and Calorimetry</em>, and <em>Scientific Reports</em>.</li>
+                <li>Provided rigorous, constructive assessments to maintain publication quality across Elsevier and Nature portfolios.</li>
               </ul>
             </div>
           </li>
+
           <li class="exp-item">
             <div class="exp-meta">
               <div class="exp-period">Jan 2023 — Present</div>
-              <div class="exp-org">Dhaka, Bangladesh</div>
+              <div class="exp-org">Applied Mathematics Programming Society, Dhaka</div>
             </div>
             <div class="exp-body">
-              <div class="exp-role">Founder — Applied Mathematics Programming Society</div>
+              <div class="exp-role">Founder</div>
               <ul class="exp-bullets">
-                <li>Enhanced accuracy in climate modelling, transport, and epidemiology by combining numerical methods, data visualisation, and particle-based simulations.</li>
-                <li>Equipped members with computational tools (Python, MATLAB, Mathematica, C++) to bridge academia and industry.</li>
+                <li>Established a society focused on numerical methods, data visualisation, and particle-based simulations across climate modelling, transport, and epidemiology.</li>
+                <li>Equipped members with Python, MATLAB, Mathematica, and C++ to bridge academia and industry; fostered collaboration through open-source projects and hackathons.</li>
               </ul>
             </div>
           </li>
+
+          <li class="exp-item">
+            <div class="exp-meta">
+              <div class="exp-period">Mar 2022 — Jun 2024</div>
+              <div class="exp-org">Fluid Flow Modelling &amp; Simulation Group, University of Dhaka</div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-role">Researcher</div>
+              <ul class="exp-bullets">
+                <li>Published 3 peer-reviewed articles in Elsevier and Springer journals; 2 additional manuscripts currently under review, accumulating 25+ citations.</li>
+                <li>Conducted research in fluid dynamics, nanofluidics, heat transfer, and microfluidics; collaborated on KAUST-funded projects.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="exp-item">
+            <div class="exp-meta">
+              <div class="exp-period">2019 — Present</div>
+              <div class="exp-org">Private Tutor, Dhaka</div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-role">Educator</div>
+              <ul class="exp-bullets">
+                <li>Specialised in engineering programme and university entrance exam preparation; 21+ students successfully admitted to university.</li>
+                <li>SAT and IELTS coach: guided a student to a 1550 SAT score (Math 790 / Reading+Writing 760), securing admission to the University of Miami.</li>
+              </ul>
+            </div>
+          </li>
+
         </ol>
       </section>
 
@@ -1048,41 +1083,31 @@
             <div class="project-num">Project 01</div>
             <div class="project-title">Epidemic Simulation (SIR Model)</div>
             <p class="project-desc">Interactive browser-based simulation of epidemic spread built on the classical SIR mathematical framework, with real-time parameter control.</p>
-            <span class="project-cta">View Live
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+            <span class="project-cta">View Live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </a>
           <a class="project-card" href="https://abidhossainsadat.github.io/Integration-Visualization/" target="_blank">
             <div class="project-num">Project 02</div>
             <div class="project-title">Integration Visualisation</div>
             <p class="project-desc">Interactive visual tool demonstrating Riemann sums and integration concepts, built for pedagogical use in applied mathematics courses.</p>
-            <span class="project-cta">View Live
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+            <span class="project-cta">View Live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </a>
           <a class="project-card" href="https://abidhossainsadat.github.io/-Neural-Colony-Simulator/" target="_blank">
             <div class="project-num">Project 03</div>
             <div class="project-title">Neural Ant Colony Pathfinder</div>
             <p class="project-desc">Browser-based Ant Colony Optimisation (ACO) simulator. Agents use stigmergy — depositing and following pheromone trails — to converge on efficient foraging routes.</p>
-            <span class="project-cta">View Live
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+            <span class="project-cta">View Live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </a>
           <a class="project-card" href="https://abidhossainsadat.github.io/Volume-under-revolution/" target="_blank">
             <div class="project-num">Project 04</div>
             <div class="project-title">Volume Under Revolution</div>
             <p class="project-desc">3D visualisation of solid volumes generated by revolving arbitrary curves around an axis — useful for multivariable calculus instruction.</p>
-            <span class="project-cta">View Live
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+            <span class="project-cta">View Live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </a>
           <a class="project-card" href="https://abidhossainsadat.github.io/DNN_Path_Finding/" target="_blank">
             <div class="project-num">Project 05</div>
-            <div class="project-title">DQN Pathfinding & Neural Monitor</div>
+            <div class="project-title">DQN Pathfinding &amp; Neural Monitor</div>
             <p class="project-desc">Interactive AI visualisation using Deep Q-Networks. The agent learns to navigate from start to goal while avoiding obstacles, with live neural activation monitoring.</p>
-            <span class="project-cta">View Live
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
+            <span class="project-cta">View Live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </a>
         </div>
       </section>
@@ -1094,6 +1119,8 @@
           <div class="section-rule"></div>
         </div>
         <h2 class="section-title">Publications</h2>
+
+        <div class="pub-subsection-title">Peer-Reviewed Journal Articles</div>
         <ol class="pub-list">
           <li class="pub-item">
             <div class="pub-number">01</div>
@@ -1103,7 +1130,7 @@
               <div class="pub-journal"><a href="https://link.springer.com/article/10.1007/s10973-023-12751-8" target="_blank">Journal of Thermal Analysis and Calorimetry</a>, 149(4), pp.1581–1594.</div>
               <div class="pub-footer">
                 <span class="pub-citation">9 citations</span>
-                <span class="pub-conference">Presented at JTAC Conference 2023, Budapest, Hungary</span>
+                <span class="pub-conference">Presented at 2nd Annual JTAC Conference 2023, Budapest, Hungary</span>
               </div>
             </div>
           </li>
@@ -1115,6 +1142,7 @@
               <div class="pub-journal"><a href="https://www.nature.com/articles/s41598-024-73426-4" target="_blank">Scientific Reports</a>, 14(1), p.23152.</div>
               <div class="pub-footer">
                 <span class="pub-citation">14 citations</span>
+                <span class="pub-badge-funded">KAUST Funded</span>
               </div>
             </div>
           </li>
@@ -1126,8 +1154,69 @@
               <div class="pub-journal"><a href="https://link.springer.com/article/10.1007/s44198-023-00145-1" target="_blank">Journal of Nonlinear Mathematical Physics</a>, 30(4), pp.1601–1620.</div>
               <div class="pub-footer">
                 <span class="pub-citation">2 citations</span>
+                <span class="pub-badge-funded">KAUST Funded</span>
                 <span class="pub-conference">Presented at AFMR-BMS Mathematical Conference 2022</span>
               </div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="pub-subsection-title">Preprints &amp; Under Review</div>
+        <ol class="pub-list">
+          <li class="pub-item">
+            <div class="pub-number">04</div>
+            <div class="pub-content">
+              <div class="pub-title">Investigating the effect of adaptive optimal control function in epidemic dynamics: predictions and strategy evolution based on SIR/V game-theoretic framework</div>
+              <div class="pub-authors">Rahat, N., <strong>Hossain, A.</strong> and Alam, M.</div>
+              <div class="pub-journal"><a href="https://arxiv.org/abs/2512.06021" target="_blank">arXiv:2512.06021</a> (2025). Under review in <em>Healthcare Analytics</em>.</div>
+              <div class="pub-footer">
+                <span class="pub-badge-preprint">Preprint</span>
+                <span class="pub-badge-funded">UGC Funded</span>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="pub-subsection-title">Conference Papers &amp; Presentations</div>
+        <ol class="pub-list">
+          <li class="pub-item">
+            <div class="pub-number">C1</div>
+            <div class="pub-content">
+              <div class="pub-title">Optimizing Epidemic Control Strategies via Differential Evolution: A Novel Approach with Adaptive Mutation and Crossover in Standard Epidemic Models</div>
+              <div class="pub-authors"><strong>Hossain, A.</strong> et al.</div>
+              <div class="pub-journal">AFMR-BMS Mathematical Conference 2024.</div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-number">C2</div>
+            <div class="pub-content">
+              <div class="pub-title">Exploring Magnetorheological Fluid Behaviour under Shear Flow via Dissipative Particle Dynamics Simulations Augmented with Ferromagnetic Interactions: Advancements through Dynamic Programming</div>
+              <div class="pub-authors"><strong>Hossain, A.</strong> and Ferdows, M.</div>
+              <div class="pub-journal">ICMMPE 2024, Paper ID: 127.</div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-number">C3</div>
+            <div class="pub-content">
+              <div class="pub-title">Analyzing Magnetorheological Fluid Dynamics under Shear Flow Using Dissipative Particle Dynamics Simulations with Ferromagnetic Interaction Enhancements: Advances through Dynamic Programming</div>
+              <div class="pub-authors"><strong>Hossain, A.</strong> et al.</div>
+              <div class="pub-journal">9th BSME International Conference on Thermal Engineering (ICTE) 2024.</div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-number">C4</div>
+            <div class="pub-content">
+              <div class="pub-title">Non-linear simulations of nanofluid flow in an MHD convective moving flat plate</div>
+              <div class="pub-authors"><strong>Hossain, A.</strong> et al.</div>
+              <div class="pub-journal">2nd Annual JTAC Conference 2023, Budapest, Hungary.</div>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-number">C5</div>
+            <div class="pub-content">
+              <div class="pub-title">Symmetry Solution of MHD Convective Heat/mass flow over Horizontal Flat Plate with Linear Thermal and Mass Slips</div>
+              <div class="pub-authors"><strong>Hossain, A.</strong> et al.</div>
+              <div class="pub-journal">AFMR-BMS Mathematical Conference 2022.</div>
             </div>
           </li>
         </ol>
@@ -1142,15 +1231,15 @@
         <h2 class="section-title">Education</h2>
         <ol class="edu-list">
           <li class="edu-item">
-            <div class="edu-period">2024 — 2025</div>
+            <div class="edu-period">2023 — 2025</div>
             <div class="edu-body">
               <div class="edu-degree">Master of Science — Applied Mathematics</div>
               <div class="edu-institution">University of Dhaka</div>
               <div class="edu-detail">
-                <span class="edu-detail-item"><strong>GPA:</strong> 3.88 / 4.00 &nbsp;·&nbsp; 3rd in class</span>
-                <span class="edu-detail-item"><strong>Thesis:</strong> Game-Theoretic Optimal Control of Vaccination and Behavioral Dynamics in an SIRV Epidemiological Framework</span>
+                <span class="edu-detail-item"><strong>GPA:</strong> 3.88 / 4.00 &nbsp;·&nbsp; 3rd in Thesis group</span>
+                <span class="edu-detail-item"><strong>Thesis:</strong> Game-Theoretic Policy Optimisation of Vaccination and Behavioural Dynamics in an SIRV Epidemiological Framework</span>
               </div>
-              <div class="edu-note">🏅 Recipient — National Science and Technology (NST) Fellowship</div>
+              <div class="edu-note">🏅 National Science and Technology (NST) Fellowship · University Master's Degree Government Scholarship</div>
             </div>
           </li>
           <li class="edu-item">
@@ -1173,7 +1262,7 @@
               <div class="edu-detail">
                 <span class="edu-detail-item"><strong>GPA:</strong> 5.00 / 5.00</span>
               </div>
-              <div class="edu-note">NDC Math Olympiad — Runner Up</div>
+              <div class="edu-note">NDC Math Olympiad — Runner Up &nbsp;·&nbsp; Regional BDBO Olympiad — 10th Position</div>
             </div>
           </li>
           <li class="edu-item">
@@ -1190,10 +1279,49 @@
         </ol>
       </section>
 
+      <!-- CERTIFICATIONS -->
+      <section class="content-section" id="certifications">
+        <div class="section-header">
+          <span class="section-label">07</span>
+          <div class="section-rule"></div>
+        </div>
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-icon">✦</div>
+            <div>
+              <div class="cert-name">Peer Review Certification</div>
+              <div class="cert-issuer">Elsevier</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">✦</div>
+            <div>
+              <div class="cert-name">Journal Reviewing Certificate</div>
+              <div class="cert-issuer">Springer Nature</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">✦</div>
+            <div>
+              <div class="cert-name">Journal Reviewing Certificate</div>
+              <div class="cert-issuer">Elsevier</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">✦</div>
+            <div>
+              <div class="cert-name">Technology and Innovation Acceleration Program</div>
+              <div class="cert-issuer">MIT xPRO</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- CONTACT -->
       <section class="content-section" id="contact">
         <div class="section-header">
-          <span class="section-label">07</span>
+          <span class="section-label">08</span>
           <div class="section-rule"></div>
         </div>
         <h2 class="section-title">Get In Touch</h2>
@@ -1201,8 +1329,9 @@
           <div>
             <p class="contact-intro">I am open to research collaborations, academic positions, and consulting opportunities in computational modelling, applied mathematics, and data-driven simulation. Please don't hesitate to reach out.</p>
             <ul class="contact-links">
-              <li><span class="c-label">Email</span><a href="mailto:abid28266@gmail.com">abid28266@gmail.com</a></li>
-              <li><span class="c-label">Location</span><span style="color: var(--text-mid)">Dhaka, Bangladesh</span></li>
+              <li><span class="c-label">Email</span><a href="mailto:abid.hossainsadat@gmail.com">abid.hossainsadat@gmail.com</a></li>
+              <li><span class="c-label">Phone</span><span style="color:var(--text-mid)">+880-1760-028266</span></li>
+              <li><span class="c-label">Location</span><span style="color:var(--text-mid)">Dhaka, Bangladesh</span></li>
               <li><span class="c-label">GitHub</span><a href="https://github.com/abidhossainsadat" target="_blank">abidhossainsadat</a></li>
               <li><span class="c-label">LinkedIn</span><a href="https://www.linkedin.com/in/abid-hossain-089347239/" target="_blank">abid-hossain-089347239</a></li>
               <li><span class="c-label">Scholar</span><a href="https://scholar.google.com/citations?user=ayPQ5jEAAAAJ" target="_blank">Google Scholar Profile</a></li>
@@ -1246,7 +1375,6 @@
     // Active nav link
     const navLinks = document.querySelectorAll('.sidebar-nav a');
     const sectionEls = document.querySelectorAll('section[id], .hero');
-
     const navObserver = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -1263,7 +1391,6 @@
     const form = document.getElementById('contactForm');
     const status = document.getElementById('formStatus');
     const btn = document.getElementById('submitBtn');
-
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       btn.disabled = true;
@@ -1280,7 +1407,7 @@
           form.reset();
         } else throw new Error();
       } catch {
-        status.textContent = 'Something went wrong. Please email directly at abid28266@gmail.com.';
+        status.textContent = 'Something went wrong. Please email directly at abid.hossainsadat@gmail.com.';
         status.className = 'form-status error';
       }
       btn.textContent = 'Send Message';
